@@ -47,7 +47,7 @@
                             <input type="password" placeholder="Password*" id="password" name="password">
 
                             <div class="htc__login__btn">
-                                <a href="{{ route('home') }} ">Register</a>
+                                <a href="{{ route('home') }}">Register</a>
                                 <!-- <a>
                                 <input type="submit" value="Register" style="border-style: none"/>
                                 </a> -->

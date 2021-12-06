@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('boring/home');
 })->name('home');
 
-Route::get('/layout', function () {
-    return view('layout/layout');
-});
-
 Route::get('/login', function () {
     return view('boring/login-register');
-});
+})->name('login');
