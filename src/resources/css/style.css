@@ -7,7 +7,7 @@
 
 
 -----------------------------------------------------------------------------------
-  
+
   CSS INDEX
   ===================
 
@@ -645,10 +645,11 @@
     padding: 0 20px;
 }
 .login__register__menu li.active a {
-    color: #ff4136;
+    /* color: #ff4136; */
+    color: #f5adad;
 }
 .login__register__menu li a:hover {
-    color: #ff4136;
+    color: #f5adad;
 }
 .htc__login__register__wrap {
     margin: 0 auto;
@@ -677,7 +678,7 @@
 }
 .tabs__checkbox span.forget a {
     float: right;
-    color: #ff4136;
+    color: #f5adad;
     font-size: 12px;
 }
 .tabs__checkbox label {
@@ -755,9 +756,9 @@
     font-size: 16px !important;
 }
 .htc__login__btn a:hover {
-    background: #ff4136;
+    background: #f5adad;
     color: #fff;
-    border: 1px solid #ff4136;
+    border: 1px solid #f5adad;
 }
 /*------------------------------
   05. Bradcaump Area
@@ -1881,13 +1882,13 @@ product__style--7
 .team__thumb a img {
     -webkit-filter: grayscale(100%);
     /* Safari 6.0 - 9.0 */
-    
+
     filter: grayscale(100%);
 }
 .team:hover .team__thumb a img {
     -webkit-filter: grayscale(0%);
     /* Safari 6.0 - 9.0 */
-    
+
     filter: grayscale(00%);
 }
 .htc__team__page .team {
@@ -3981,7 +3982,7 @@ a.shipping-calculator-button:hover {
     transform: scale(1.5);
     opacity: 0;
     z-index: 99;
-    
+
 }
 .portfolio-icon a i {
     line-height: 50px;
