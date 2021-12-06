@@ -55,7 +55,7 @@
                             <nav class="mainmenu__nav hidden-xs hidden-sm">
                                 <ul class="main__menu">
                                     <li class="drop"><a href="index.html">Home</a></li>
-                                    <li class="drop"><a href="portfolio-card-box-2.html">Vendor</a>
+                                    <li class="drop"><a href="portfolio-card-box-2.html">Venue</a>
                                         <ul class="dropdown">
                                             <li><a href="portfolio-card-box-2.html">portfolio</a></li>
                                             <li><a href="single-portfolio.html">Single portfolio</a></li>
@@ -318,7 +318,7 @@
                                         <div class="row">
                                             <div class="col-md-10 col-lg-8 col-md-offset-2 col-lg-offset-4 col-sm-12 col-xs-12">
                                                 <div class="slider__inner">
-                                                    <h1>New<span class="text--theme">Wedding Vendor</span></h1>
+                                                    <h1>New<span class="text--theme">Wedding Venue</span></h1>
                                                     <div class="slider__btn">
                                                         <a class="htc__btn" href="cart.html">shop now</a>
                                                     </div>
@@ -355,7 +355,7 @@
                             </div>
                             <div class="category-menu-list">
                                 <ul>
-                                    <li><a href="#"><img alt="" src="images/icons/thum2.png"> Wedding Vendor <i class="zmdi zmdi-chevron-right"></i></a>
+                                    <li><a href="#"><img alt="" src="images/icons/thum2.png"> Wedding Venue <i class="zmdi zmdi-chevron-right"></i></a>
                                         <div class="category-menu-dropdown">
                                             <div class="category-part-1 category-common mb--30">
                                                 <h4 class="categories-subtitle"> Jewelry & Watches</h4>
@@ -551,7 +551,7 @@
         <div class="only-banner ptb--100 bg__white">
             <div class="container">
                 <div class="only-banner-img">
-                    <a href="shop-sidebar.html"><img src="images/new-product/3.jpg" alt="new product"></a>
+                    <a href="shop-sidebar.html"><img src="images/new-product/3.png" alt="new product"></a>
                 </div>
             </div>
         </div>
@@ -562,19 +562,16 @@
                     <div class="col-md-3">
                         <div class="product-categories-all">
                             <div class="product-categories-title">
-                                <h3>Jewelry & watches</h3>
+                                <h3>Wedding Venue</h3>
                             </div>
                             <div class="product-categories-menu">
                                 <ul>
-                                    <li><a href="#">awesome Rings</a></li>
-                                    <li><a href="#">Hot Earrings</a></li>
-                                    <li><a href="#">Jewelry Sets</a></li>
-                                    <li><a href="#">Beads Jewelry</a></li>
-                                    <li><a href="#">Men's Watches</a></li>
-                                    <li><a href="#">Women’s Watches</a></li>
-                                    <li><a href="#">Popular Bracelets</a></li>
-                                    <li><a href="#"> Pendant Necklaces</a></li>
-                                    <li><a href="#">Children's Watches</a></li>
+                                    <li><a href="#">Mosque</a></li>
+                                    <li><a href="#">Cathedral</a></li>
+                                    <li><a href="#">Park</a></li>
+                                    <li><a href="#">Hotel</a></li>
+                                    <li><a href="#">Convention Hall</a></li>
+                                    <li><a href="#">ALL</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -635,10 +632,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
-                                                        <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                                        <h2><a href="product-details.html">Masjidil Halal</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">$16.00</li>
-                                                            <li class="new__price">$10.00</li>
+                                                            <li class="old__price">Rp500.000</li>
+                                                            <li class="new__price">Rp399.000</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -660,10 +657,9 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
-                                                        <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                                        <h2><a href="product-details.html">Hotel Savana</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">$16.00</li>
-                                                            <li class="new__price">$10.00</li>
+                                                            <li class="new__price">Rp1.500.000</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -685,10 +681,10 @@
                                                         </div>
                                                     </div>
                                                     <div class="product__details">
-                                                        <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                                        <h2><a href="product-details.html">Gedung Sasana Krida UM</a></h2>
                                                         <ul class="product__price">
-                                                            <li class="old__price">$16.00</li>
-                                                            <li class="new__price">$10.00</li>
+                                                            <li class="old__price">Rp2.000.000</li>
+                                                            <li class="new__price">Rp1.799.000</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -1149,7 +1145,7 @@
         <div class="only-banner ptb--100 bg__white">
             <div class="container">
                 <div class="only-banner-img">
-                    <a href="shop-sidebar.html"><img src="images/new-product/6.jpg" alt="new product"></a>
+                    <a href="shop-sidebar.html"><img src="images/new-product/6.png" alt="new product"></a>
                 </div>
             </div>
         </div>
@@ -1822,7 +1818,7 @@
         <div class="only-banner bg__white">
             <div class="container">
                 <div class="only-banner-img">
-                    <a href="shop-sidebar.html"><img src="images/new-product/7.jpg" alt="new product"></a>
+                    <a href="shop-sidebar.html"><img src="images/new-product/7.png" alt="new product"></a>
                 </div>
             </div>
         </div>
