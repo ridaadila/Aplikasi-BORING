@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
                             <div class="logo">
-                                <a href="index.html">
+                                <a href="{{ route('home') }}">
                                     <img src="images/logo/logo.png" alt="logo">
                                 </a>
                             </div>
@@ -54,75 +54,32 @@
                         <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
                             <nav class="mainmenu__nav hidden-xs hidden-sm">
                                 <ul class="main__menu">
-                                    <li class="drop"><a href="index.html">Home</a></li>
-                                    <li class="drop"><a href="portfolio-card-box-2.html">Vendor</a>
-                                        <ul class="dropdown">
-                                            <li><a href="portfolio-card-box-2.html">portfolio</a></li>
-                                            <li><a href="single-portfolio.html">Single portfolio</a></li>
-                                        </ul>
+                                    <li class="drop"><a href="{{ route('home') }}">Home</a></li>
+                                    <li class="drop"><a href="{{ route('venue') }}">Venue</a>
                                     </li>
-                                    <li class="drop"><a href="blog.html">Photography</a>
-                                        <ul class="dropdown">
-                                            <li><a href="blog.html">blog 3 column</a></li>
-                                            <li><a href="blog-details.html">Blog details</a></li>
-                                        </ul>
+                                    <li class="drop"><a href="{{ route('decor') }}">Decoration</a>
                                     </li>
-                                    <li class="drop"><a href="shop.html">Catering</a>
-                                        <ul class="dropdown mega_dropdown">
-                                            <!-- Start Single Mega MEnu -->
-                                            <li><a class="mega__title" href="shop.html">shop layout</a>
-                                                <ul class="mega__item">
-                                                    <li><a href="shop.html">default shop</a></li>
-                                                </ul>
-                                            </li>
-                                            <!-- End Single Mega MEnu -->
-                                            <!-- Start Single Mega MEnu -->
-                                            <li><a class="mega__title" href="shop.html">product details layout</a>
-                                                <ul class="mega__item">
-                                                    <li><a href="product-details.html">tab style 1</a></li></li>
-                                                </ul>
-                                            </li>
-                                            <!-- End Single Mega MEnu -->
-                                            <!-- Start Single Mega MEnu -->
-                                            <li>
-                                                <ul class="mega__item">
-                                                    <li>
-                                                        <div class="mega-item-img">
-                                                            <a href="shop.html">
-                                                                <img src="images/feature-img/3.png" alt="">
-                                                            </a>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <!-- End Single Mega MEnu -->
-                                        </ul>
+                                    <li class="drop"><a href="{{ route('photo') }}">Photography</a>
                                     </li>
-                                    <li class="drop"><a href="#">Review</a>
+                                    <li class="drop"><a href="{{ route('catering') }}">Catering</a>
+                                    </li>
+                                    <li class="drop"><a href="#">About</a>
                                         <ul class="dropdown">
-                                            <li><a href="about.html">about</a></li>
+                                            <li><a href="{{ route('about') }}">about</a></li>
+                                            <li><a href="{{ route('contact') }}">contact</a></li>
                                             <li><a href="#">testimonials <span><i class="zmdi zmdi-chevron-right"></i></span></a>
                                                 <ul class="lavel-dropdown">
-                                                    <li><a href="customer-review.html">customer review</a></li>
+                                                    <li><a href="{{ route('review') }}">customer review</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="shop.html">shop</a></li>
-                                            <li><a href="shop-sidebar.html">shop sidebar</a></li>
-                                            <li><a href="product-details.html">product details</a></li>
-                                            <li><a href="cart.html">cart</a></li>
-                                            <li><a href="wishlist.html">wishlist</a></li>
-                                            <li><a href="checkout.html">checkout</a></li>
-                                            <li><a href="team.html">team</a></li>
-                                            <li><a href="{{ route('login') }}">login & register</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">About</a></li>
                                 </ul>
                             </nav>
                             <div class="mobile-menu clearfix visible-xs visible-sm">
                                 <nav id="mobile_dropdown">
                                     <ul>
-                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="{{ route('home') }}">Home</a></li>
                                         <li><a href="#">portfolio</a>
                                             <ul>
                                                 <li><a href="portfolio-card-box-2.html">portfolio</a></li>
@@ -142,9 +99,9 @@
                                                 <li><a href="shop.html">shop</a></li>
                                                 <li><a href="shop-sidebar.html">shop sidebar</a></li>
                                                 <li><a href="product-details.html">product details</a></li>
-                                                <li><a href="cart.html">cart</a></li>
+                                                <li><a href="{{ route('cart') }}">cart</a></li>
                                                 <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="checkout.html">checkout</a></li>
+                                                <li><a href="{{ route('checkout') }}">checkout</a></li>
                                                 <li><a href="team.html">team</a></li>
                                                 <li><a href="{{ route('login') }}">login & register</a></li>
                                             </ul>
@@ -174,6 +131,25 @@
         <div class="body__overlay"></div>
         <!-- Start Offset Wrapper -->
         <div class="offset__wrapper">
+            <!-- Start Search Popap -->
+            <div class="search__area">
+                <div class="container" >
+                    <div class="row" >
+                        <div class="col-md-12" >
+                            <div class="search__inner">
+                                <form action="#" method="get">
+                                    <input placeholder="Search here... " type="text">
+                                    <button type="submit"></button>
+                                </form>
+                                <div class="search__close__btn">
+                                    <span class="search__close__btn_icon"><i class="zmdi zmdi-close"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Search Popap -->
             <!-- Start Offset MEnu -->
             <div class="offsetmenu">
                 <div class="offsetmenu__inner">
@@ -182,40 +158,16 @@
                     </div>
                     <div class="off__contact">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="{{ route('home') }}">
                                 <img src="images/logo/logo.png" alt="logo">
                             </a>
                         </div>
-                        <p>Lorem ipsum dolor sit amet consectetu adipisicing elit sed do eiusmod tempor incididunt ut labore.</p>
+                        <p>Are you a vendor?</p>
                     </div>
-                    <ul class="sidebar__thumd">
-                        <li><a href="#"><img src="images/sidebar-img/1.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/2.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/3.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/4.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/5.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/6.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/7.jpg" alt="sidebar images"></a></li>
-                        <li><a href="#"><img src="images/sidebar-img/8.jpg" alt="sidebar images"></a></li>
+                    <ul class="shopping__btn">
+                        <li><a href="{{ route('login') }}">Become a Vendor</a></li>
+                        {{-- <li class="shp__checkout"><a href="{{ route('checkout') }}">Checkout</a></li> --}}
                     </ul>
-                    <div class="offset__widget">
-                        <div class="offset__single">
-                            <h4 class="offset__title">Language</h4>
-                            <ul>
-                                <li><a href="#"> Engish </a></li>
-                                <li><a href="#"> French </a></li>
-                                <li><a href="#"> German </a></li>
-                            </ul>
-                        </div>
-                        <div class="offset__single">
-                            <h4 class="offset__title">Currencies</h4>
-                            <ul>
-                                <li><a href="#"> USD : Dollar </a></li>
-                                <li><a href="#"> EUR : Euro </a></li>
-                                <li><a href="#"> POU : Pound </a></li>
-                            </ul>
-                        </div>
-                    </div>
                     <div class="offset__sosial__share">
                         <h4 class="offset__title">Follow Us On Social</h4>
                         <ul class="off__soaial__link">
@@ -276,8 +228,8 @@
                         <li class="total__price">$130.00</li>
                     </ul>
                     <ul class="shopping__btn">
-                        <li><a href="cart.html">View Cart</a></li>
-                        <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+                        <li><a href="{{ route('cart') }}">View Cart</a></li>
+                        <li class="shp__checkout"><a href="{{ route('checkout') }}">Checkout</a></li>
                     </ul>
                 </div>
             </div>
@@ -298,7 +250,7 @@
                         <div class="col-md-3 col-lg-3 col-sm-6">
                             <div class="ft__widget">
                                 <div class="ft__logo">
-                                    <a href="index.html">
+                                    <a href="{{ route('home') }}">
                                         <img src="images/logo/logo.png" alt="footer logo">
                                     </a>
                                 </div>
@@ -401,11 +353,11 @@
                         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
                             <div class="copyright__inner">
                                 <div class="copyright">
-                                    <p>© 2017 <a href="https://freethemescloud.com/">Free themes Cloud</a>
+                                    <p>© 2021 BoRing - Booking Daring</a>
                                     All Right Reserved.</p>
                                 </div>
                                 <ul class="footer__menu">
-                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="{{ route('home') }}">Home</a></li>
                                     <li><a href="shop.html">Product</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
