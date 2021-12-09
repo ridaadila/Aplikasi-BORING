@@ -253,3 +253,9 @@ alter table TRANSAKSI_SEMENTARA add constraint FK_MEMPUNYAI_8 foreign key (ID_JA
 alter table TRANSAKSI_SEMENTARA add constraint FK_MEMPUNYAI_9 foreign key (ID_PRODUK_TEMPAT_AKAD)
       references PRODUK_TEMPAT_AKAD_NIKAH (ID_PRODUK_TEMPAT_AKAD) on delete cascade on update cascade;
 
+INSERT INTO `jenis_penyedia_layanan` (`ID_JENIS_PENYEDIA`, `NAMA`) VALUES
+(1, 'Tempat akad nikah'),
+(2, 'Catering'),
+(3, 'Dekorasi'),
+(4, 'Fotografer');
+
