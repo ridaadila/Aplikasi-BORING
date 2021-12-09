@@ -14,5 +14,49 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('boring/home');
+})->name('home');
+
+Route::get('/login', function () {
+    return view('boring/login-register');
+})->name('login');
+
+Route::get('/contact', function () {
+    return view('boring/contact');
+})->name('contact');
+
+Route::get('/about', function () {
+    return view('boring/about');
+})->name('about');
+
+Route::get('/review', function () {
+    return view('boring/review');
+})->name('review');
+
+
+// Vendor
+Route::get('/venue', function () {
+    return view('boring/vendor/venue');
+})->name('venue');
+
+Route::get('/decoration', function () {
+    return view('boring/vendor/decoration');
+})->name('decor');
+
+Route::get('/photography', function () {
+    return view('boring/vendor/photography');
+})->name('photo');
+
+Route::get('/catering', function () {
+    return view('boring/vendor/catering');
+})->name('catering');
+
+
+// Transaksi
+Route::get('/cart', function () {
+    return view('transaksi/cart');
+})->name('cart');
+
+Route::get('/checkout', function () {
+    return view('transaksi/checkout');
+})->name('checkout');
