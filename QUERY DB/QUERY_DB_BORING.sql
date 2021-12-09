@@ -30,68 +30,25 @@ drop table if exists TRANSAKSI;
 
 drop table if exists TRANSAKSI_SEMENTARA;
 
-drop table if exists USER;
+drop table if exists USERS;
 
 /*==============================================================*/
-/* Table: FOTO_PRODUK_JASA_CATERING                             */
+/* Table: USER                                                  */
 /*==============================================================*/
-create table FOTO_PRODUK_JASA_CATERING
-(
-   ID_FOTO_PRODUK_JASA_CATERING int not null,
-   ID_JASA_CATERING     int not null,
-   FILE                 longblob not null,
-   primary key (ID_FOTO_PRODUK_JASA_CATERING)
-);
-
-/*==============================================================*/
-/* Table: FOTO_PRODUK_JASA_DEKORASI                             */
-/*==============================================================*/
-create table FOTO_PRODUK_JASA_DEKORASI
-(
-   ID_FOTO_PRODUK_JASA_DEKORASI int not null,
-   ID_JASA_DEKORASI     int not null,
-   FILE                 longblob not null,
-   primary key (ID_FOTO_PRODUK_JASA_DEKORASI)
-);
-
-/*==============================================================*/
-/* Table: FOTO_PRODUK_JASA_FOTOGRAFER                           */
-/*==============================================================*/
-create table FOTO_PRODUK_JASA_FOTOGRAFER
-(
-   ID_FOTO_PRODUK_JASA_FOTOGRAFER int not null,
-   ID_PRODUK_JASA_FOTOGRAFER int not null,
-   FILE                 longblob not null,
-   primary key (ID_FOTO_PRODUK_JASA_FOTOGRAFER)
-);
-
-/*==============================================================*/
-/* Table: FOTO_PRODUK_TEMPAT_AKAD_NIKAH                         */
-/*==============================================================*/
-create table FOTO_PRODUK_TEMPAT_AKAD_NIKAH
-(
-   ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH int not null,
-   ID_PRODUK_TEMPAT_AKAD int not null,
-   FILE                 longblob not null,
-   primary key (ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH)
-);
-
-/*==============================================================*/
-/* Table: FOTO_TOKO                                             */
-/*==============================================================*/
-create table FOTO_TOKO
-(
-   ID_FOTO_TOKO         int not null,
-   ID_PENYEDIA_LAYANAN  int not null,
-   FILE                 longblob not null,
-   primary key (ID_FOTO_TOKO)
+create table USERS  (
+   ID_USER              int not null,
+   USERNAME             varchar(50) not null,
+   EMAIL                varchar(50) not null,
+   PASSWORD             varchar(255) not null,
+   NAMA                 varchar(255) not null,
+   ROLE                 char(1) not null,
+   primary key (ID_USER)
 );
 
 /*==============================================================*/
 /* Table: JENIS_PENYEDIA_LAYANAN                                */
 /*==============================================================*/
-create table JENIS_PENYEDIA_LAYANAN
-(
+create table JENIS_PENYEDIA_LAYANAN (
    ID_JENIS_PENYEDIA    int not null,
    NAMA                 varchar(255) not null,
    primary key (ID_JENIS_PENYEDIA)
@@ -100,8 +57,7 @@ create table JENIS_PENYEDIA_LAYANAN
 /*==============================================================*/
 /* Table: PENYEDIA_LAYANAN                                      */
 /*==============================================================*/
-create table PENYEDIA_LAYANAN
-(
+create table PENYEDIA_LAYANAN (
    ID_PENYEDIA_LAYANAN  int not null,
    ID_USER              int not null,
    ID_JENIS_PENYEDIA    int not null,
@@ -115,8 +71,7 @@ create table PENYEDIA_LAYANAN
 /*==============================================================*/
 /* Table: PRODUK_JASA_CATERING                                  */
 /*==============================================================*/
-create table PRODUK_JASA_CATERING
-(
+create table PRODUK_JASA_CATERING (
    ID_JASA_CATERING     int not null,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA_PAKET           varchar(50) not null,
@@ -130,8 +85,7 @@ create table PRODUK_JASA_CATERING
 /*==============================================================*/
 /* Table: PRODUK_JASA_DEKORASI                                  */
 /*==============================================================*/
-create table PRODUK_JASA_DEKORASI
-(
+create table PRODUK_JASA_DEKORASI (
    ID_JASA_DEKORASI     int not null,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA_PAKET           varchar(50) not null,
@@ -145,8 +99,7 @@ create table PRODUK_JASA_DEKORASI
 /*==============================================================*/
 /* Table: PRODUK_JASA_FOTOGRAFER                                */
 /*==============================================================*/
-create table PRODUK_JASA_FOTOGRAFER
-(
+create table PRODUK_JASA_FOTOGRAFER (
    ID_PRODUK_JASA_FOTOGRAFER int not null,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA                 varchar(255) not null,
@@ -160,8 +113,7 @@ create table PRODUK_JASA_FOTOGRAFER
 /*==============================================================*/
 /* Table: PRODUK_TEMPAT_AKAD_NIKAH                              */
 /*==============================================================*/
-create table PRODUK_TEMPAT_AKAD_NIKAH
-(
+create table PRODUK_TEMPAT_AKAD_NIKAH (
    ID_PRODUK_TEMPAT_AKAD int not null,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA                 varchar(255) not null,
@@ -175,10 +127,59 @@ create table PRODUK_TEMPAT_AKAD_NIKAH
 );
 
 /*==============================================================*/
+/* Table: FOTO_PRODUK_JASA_CATERING                             */
+/*==============================================================*/
+create table FOTO_PRODUK_JASA_CATERING (
+   ID_FOTO_PRODUK_JASA_CATERING int not null,
+   ID_JASA_CATERING     int not null,
+   FILE                 longblob not null,
+   primary key (ID_FOTO_PRODUK_JASA_CATERING)
+);
+
+/*==============================================================*/
+/* Table: FOTO_PRODUK_JASA_DEKORASI                             */
+/*==============================================================*/
+create table FOTO_PRODUK_JASA_DEKORASI (
+   ID_FOTO_PRODUK_JASA_DEKORASI int not null,
+   ID_JASA_DEKORASI     int not null,
+   FILE                 longblob not null,
+   primary key (ID_FOTO_PRODUK_JASA_DEKORASI)
+);
+
+/*==============================================================*/
+/* Table: FOTO_PRODUK_JASA_FOTOGRAFER                           */
+/*==============================================================*/
+create table FOTO_PRODUK_JASA_FOTOGRAFER (
+   ID_FOTO_PRODUK_JASA_FOTOGRAFER int not null,
+   ID_PRODUK_JASA_FOTOGRAFER int not null,
+   FILE                 longblob not null,
+   primary key (ID_FOTO_PRODUK_JASA_FOTOGRAFER)
+);
+
+/*==============================================================*/
+/* Table: FOTO_PRODUK_TEMPAT_AKAD_NIKAH                         */
+/*==============================================================*/
+create table FOTO_PRODUK_TEMPAT_AKAD_NIKAH (
+   ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH int not null,
+   ID_PRODUK_TEMPAT_AKAD int not null,
+   FILE                 longblob not null,
+   primary key (ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH)
+);
+
+/*==============================================================*/
+/* Table: FOTO_TOKO                                             */
+/*==============================================================*/
+create table FOTO_TOKO (
+   ID_FOTO_TOKO         int not null,
+   ID_PENYEDIA_LAYANAN  int not null,
+   FILE                 longblob not null,
+   primary key (ID_FOTO_TOKO)
+);
+
+/*==============================================================*/
 /* Table: TRANSAKSI                                             */
 /*==============================================================*/
-create table TRANSAKSI
-(
+create table TRANSAKSI (
    ID_TRANSAKSI         int not null,
    ID_USER              int not null,
    STATUS_PEMBAYARAN    int not null,
@@ -191,8 +192,7 @@ create table TRANSAKSI
 /*==============================================================*/
 /* Table: TRANSAKSI_SEMENTARA                                   */
 /*==============================================================*/
-create table TRANSAKSI_SEMENTARA
-(
+create table TRANSAKSI_SEMENTARA(
    ID_TRANSAKSI_SEMENTARA int not null,
    ID_TRANSAKSI         int not null,
    ID_JASA_DEKORASI     int,
@@ -200,20 +200,6 @@ create table TRANSAKSI_SEMENTARA
    ID_JASA_CATERING     int,
    ID_PRODUK_TEMPAT_AKAD int,
    primary key (ID_TRANSAKSI_SEMENTARA)
-);
-
-/*==============================================================*/
-/* Table: USER                                                  */
-/*==============================================================*/
-create table USER
-(
-   ID_USER              int not null,
-   USERNAME             varchar(50) not null,
-   EMAIL                varchar(50) not null,
-   PASSWORD             varchar(255) not null,
-   NAMA                 varchar(255) not null,
-   ROLE                 char(1) not null,
-   primary key (ID_USER)
 );
 
 alter table FOTO_PRODUK_JASA_CATERING add constraint FK_DOKUMEN_FOTO_CATERING foreign key (ID_JASA_CATERING)
@@ -235,7 +221,7 @@ alter table PENYEDIA_LAYANAN add constraint FK_JENIS_PENYEDIA foreign key (ID_JE
       references JENIS_PENYEDIA_LAYANAN (ID_JENIS_PENYEDIA) on delete cascade on update cascade;
 
 alter table PENYEDIA_LAYANAN add constraint FK_USER_PENYEDIA_LAYANAN foreign key (ID_USER)
-      references USER (ID_USER) on delete cascade on update cascade;
+      references USERS (ID_USER) on delete cascade on update cascade;
 
 alter table PRODUK_JASA_CATERING add constraint FK_PENYEDIA_PRODUK_JASA_CATERING foreign key (ID_PENYEDIA_LAYANAN)
       references PENYEDIA_LAYANAN (ID_PENYEDIA_LAYANAN) on delete cascade on update cascade;
@@ -250,7 +236,7 @@ alter table PRODUK_TEMPAT_AKAD_NIKAH add constraint FK_PENYEDIA_PRODUK_TEMPAT_AK
       references PENYEDIA_LAYANAN (ID_PENYEDIA_LAYANAN) on delete cascade on update cascade;
 
 alter table TRANSAKSI add constraint FK_MELAKUKAN_4 foreign key (ID_USER)
-      references USER (ID_USER) on delete cascade on update cascade;
+      references USERS (ID_USER) on delete cascade on update cascade;
 
 alter table TRANSAKSI_SEMENTARA add constraint FK_MEMILIKI_11 foreign key (ID_TRANSAKSI)
       references TRANSAKSI (ID_TRANSAKSI) on delete cascade on update cascade;
