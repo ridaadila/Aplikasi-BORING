@@ -36,7 +36,7 @@ drop table if exists USERS;
 /* Table: USER                                                  */
 /*==============================================================*/
 create table USERS  (
-   ID_USER              int not null,
+   ID_USER              int not null AUTO_INCREMENT,
    USERNAME             varchar(50) not null,
    EMAIL                varchar(50) not null,
    PASSWORD             varchar(255) not null,
@@ -49,7 +49,7 @@ create table USERS  (
 /* Table: JENIS_PENYEDIA_LAYANAN                                */
 /*==============================================================*/
 create table JENIS_PENYEDIA_LAYANAN (
-   ID_JENIS_PENYEDIA    int not null,
+   ID_JENIS_PENYEDIA    int not null AUTO_INCREMENT,
    NAMA                 varchar(255) not null,
    primary key (ID_JENIS_PENYEDIA)
 );
@@ -58,7 +58,7 @@ create table JENIS_PENYEDIA_LAYANAN (
 /* Table: PENYEDIA_LAYANAN                                      */
 /*==============================================================*/
 create table PENYEDIA_LAYANAN (
-   ID_PENYEDIA_LAYANAN  int not null,
+   ID_PENYEDIA_LAYANAN  int not null AUTO_INCREMENT,
    ID_USER              int not null,
    ID_JENIS_PENYEDIA    int not null,
    NAMA_TOKO_JASA       varchar(255) not null,
@@ -72,7 +72,7 @@ create table PENYEDIA_LAYANAN (
 /* Table: PRODUK_JASA_CATERING                                  */
 /*==============================================================*/
 create table PRODUK_JASA_CATERING (
-   ID_JASA_CATERING     int not null,
+   ID_JASA_CATERING     int not null AUTO_INCREMENT,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA_PAKET           varchar(50) not null,
    DESKRIPSI            varchar(500) not null,
@@ -86,7 +86,7 @@ create table PRODUK_JASA_CATERING (
 /* Table: PRODUK_JASA_DEKORASI                                  */
 /*==============================================================*/
 create table PRODUK_JASA_DEKORASI (
-   ID_JASA_DEKORASI     int not null,
+   ID_JASA_DEKORASI     int not null AUTO_INCREMENT,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA_PAKET           varchar(50) not null,
    DESKRIPSI            varchar(500) not null,
@@ -100,7 +100,7 @@ create table PRODUK_JASA_DEKORASI (
 /* Table: PRODUK_JASA_FOTOGRAFER                                */
 /*==============================================================*/
 create table PRODUK_JASA_FOTOGRAFER (
-   ID_PRODUK_JASA_FOTOGRAFER int not null,
+   ID_PRODUK_JASA_FOTOGRAFER int not null AUTO_INCREMENT,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA                 varchar(255) not null,
    DESKRIPSI            varchar(500) not null,
@@ -114,7 +114,7 @@ create table PRODUK_JASA_FOTOGRAFER (
 /* Table: PRODUK_TEMPAT_AKAD_NIKAH                              */
 /*==============================================================*/
 create table PRODUK_TEMPAT_AKAD_NIKAH (
-   ID_PRODUK_TEMPAT_AKAD int not null,
+   ID_PRODUK_TEMPAT_AKAD int not null AUTO_INCREMENT,
    ID_PENYEDIA_LAYANAN  int not null,
    NAMA                 varchar(255) not null,
    LOKASI               varchar(100) not null,
@@ -130,7 +130,7 @@ create table PRODUK_TEMPAT_AKAD_NIKAH (
 /* Table: FOTO_PRODUK_JASA_CATERING                             */
 /*==============================================================*/
 create table FOTO_PRODUK_JASA_CATERING (
-   ID_FOTO_PRODUK_JASA_CATERING int not null,
+   ID_FOTO_PRODUK_JASA_CATERING int not null AUTO_INCREMENT,
    ID_JASA_CATERING     int not null,
    FILE                 longblob not null,
    primary key (ID_FOTO_PRODUK_JASA_CATERING)
@@ -140,7 +140,7 @@ create table FOTO_PRODUK_JASA_CATERING (
 /* Table: FOTO_PRODUK_JASA_DEKORASI                             */
 /*==============================================================*/
 create table FOTO_PRODUK_JASA_DEKORASI (
-   ID_FOTO_PRODUK_JASA_DEKORASI int not null,
+   ID_FOTO_PRODUK_JASA_DEKORASI int not null AUTO_INCREMENT,
    ID_JASA_DEKORASI     int not null,
    FILE                 longblob not null,
    primary key (ID_FOTO_PRODUK_JASA_DEKORASI)
@@ -150,7 +150,7 @@ create table FOTO_PRODUK_JASA_DEKORASI (
 /* Table: FOTO_PRODUK_JASA_FOTOGRAFER                           */
 /*==============================================================*/
 create table FOTO_PRODUK_JASA_FOTOGRAFER (
-   ID_FOTO_PRODUK_JASA_FOTOGRAFER int not null,
+   ID_FOTO_PRODUK_JASA_FOTOGRAFER int not null AUTO_INCREMENT,
    ID_PRODUK_JASA_FOTOGRAFER int not null,
    FILE                 longblob not null,
    primary key (ID_FOTO_PRODUK_JASA_FOTOGRAFER)
@@ -160,7 +160,7 @@ create table FOTO_PRODUK_JASA_FOTOGRAFER (
 /* Table: FOTO_PRODUK_TEMPAT_AKAD_NIKAH                         */
 /*==============================================================*/
 create table FOTO_PRODUK_TEMPAT_AKAD_NIKAH (
-   ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH int not null,
+   ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH int not null AUTO_INCREMENT,
    ID_PRODUK_TEMPAT_AKAD int not null,
    FILE                 longblob not null,
    primary key (ID_FOTO_PRODUK_TEMPAT_AKAD_NIKAH)
@@ -170,7 +170,7 @@ create table FOTO_PRODUK_TEMPAT_AKAD_NIKAH (
 /* Table: FOTO_TOKO                                             */
 /*==============================================================*/
 create table FOTO_TOKO (
-   ID_FOTO_TOKO         int not null,
+   ID_FOTO_TOKO         int not null AUTO_INCREMENT,
    ID_PENYEDIA_LAYANAN  int not null,
    FILE                 longblob not null,
    primary key (ID_FOTO_TOKO)
@@ -180,7 +180,7 @@ create table FOTO_TOKO (
 /* Table: TRANSAKSI                                             */
 /*==============================================================*/
 create table TRANSAKSI (
-   ID_TRANSAKSI         int not null,
+   ID_TRANSAKSI         int not null AUTO_INCREMENT,
    ID_USER              int not null,
    STATUS_PEMBAYARAN    int not null,
    LIST_BARANG          longtext not null,
@@ -193,7 +193,7 @@ create table TRANSAKSI (
 /* Table: TRANSAKSI_SEMENTARA                                   */
 /*==============================================================*/
 create table TRANSAKSI_SEMENTARA(
-   ID_TRANSAKSI_SEMENTARA int not null,
+   ID_TRANSAKSI_SEMENTARA int not null AUTO_INCREMENT,
    ID_TRANSAKSI         int not null,
    ID_JASA_DEKORASI     int,
    ID_PRODUK_JASA_FOTOGRAFER int,
