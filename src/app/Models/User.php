@@ -17,6 +17,10 @@ class User extends Authenticatable
      *
      * @var string[]
      */
+
+    protected $table = 'users';
+    protected $primaryKey = 'id_user';
+
     protected $fillable = [
         'name',
         'email',
@@ -41,4 +45,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function transaksi()
+    {
+        return $this->hasMany(Transaksi::class, 'id_user');
+    }
+
+    public function penyediaLayanan()
+    {
+        return $this->hasMany(PenyediaLayanan::class, 'id_user');
+    }
 }
