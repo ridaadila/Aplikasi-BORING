@@ -60,3 +60,8 @@ Route::get('/cart', function () {
 Route::get('/checkout', function () {
     return view('transaksi/checkout');
 })->name('checkout');
+
+// Admin
+Route::get('/admin', function () {
+    return view('layout/admin');
+})->name('admin');
