@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\VenueController;
+use App\Http\Controllers\DekorasiController;
+use App\Http\Controllers\FotograferController;
+use App\Http\Controllers\CateringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,10 +17,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [BerandaController::class, 'index']);
+Route::get('/venue', [VenueController::class, 'index']);
+Route::get('/decoration', [DekorasiController::class, 'index']);
+Route::get('/photography', [FotograferController::class, 'index']);
+Route::get('/catering', [CateringController::class, 'index']);
 
-Route::get('/', function () {
-    return view('boring/home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('boring/home');
+// })->name('home');
 
 Route::get('/login', function () {
     return view('boring/login-register');
@@ -34,22 +44,22 @@ Route::get('/review', function () {
 })->name('review');
 
 
-// Vendor
-Route::get('/venue', function () {
-    return view('boring/vendor/venue');
-})->name('venue');
+// // Vendor
+// Route::get('/venue', function () {
+//     return view('boring/vendor/venue');
+// })->name('venue');
 
-Route::get('/decoration', function () {
-    return view('boring/vendor/decoration');
-})->name('decor');
+// Route::get('/decoration', function () {
+//     return view('boring/vendor/decoration');
+// })->name('decor');
 
-Route::get('/photography', function () {
-    return view('boring/vendor/photography');
-})->name('photo');
+// Route::get('/photography', function () {
+//     return view('boring/vendor/photography');
+// })->name('photo');
 
-Route::get('/catering', function () {
-    return view('boring/vendor/catering');
-})->name('catering');
+// Route::get('/catering', function () {
+//     return view('boring/vendor/catering');
+// })->name('catering');
 
 
 // Transaksi

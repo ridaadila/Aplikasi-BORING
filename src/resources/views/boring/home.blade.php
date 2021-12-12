@@ -53,154 +53,35 @@
                     </div>
                     <div class="category-menu-list">
                         <ul>
-                            <li><a href="#"><img alt="" src="images/icons/thum2.png"> Wedding Venue <i class="zmdi zmdi-chevron-right"></i></a>
-                                <div class="category-menu-dropdown">
-                                    <div class="category-part-1 category-common mb--30">
-                                        <h4 class="categories-subtitle"> Mosque </h4>
-                                        <ul>
-                                            <li><a href="#"> Masjid al-Aqsha </a></li>
-                                            <li><a href="#"> Masjidil Halal </a></li>
-                                            <li><a href="#"> Masjid al-Akbar </a></li>
-                                        </ul>
+                            @foreach ($array as $key=>$value)
+                                <li><a href="#"><img alt="" src="images/icons/thum2.png"> {{$key}} <i class="zmdi zmdi-chevron-right"></i></a>
+                                    <div class="category-menu-dropdown">
+                                        @if ($key=="Fotografer" || $key=="Venue")
+                                            <?php $count = 1; ?> 
+                                            @foreach ($value as $k=>$v)
+                                                <div class="category-part-{{$count}} category-common mb--30">
+                                                    <h4 class="categories-subtitle"> {{$k}} </h4>
+                                                    <ul>
+                                                        @foreach ($v as $item)
+                                                            <li><a href="#"> {{$item['nama_toko_jasa']}} </a></li>
+                                                        @endforeach
+                                                    </ul>
+                                                </div>
+                                            <?php $count+=1; ?>
+                                            @endforeach
+                                        @else 
+                                                <div class="category-part-1 category-common mb--30">
+                                                    <h4 class="categories-subtitle"> {{$key}} </h4>
+                                                    <ul>
+                                                        @foreach ($value as $item)
+                                                            <li><a href="#"> {{$item['nama_toko_jasa']}} </a></li>
+                                                        @endforeach 
+                                                    </ul>
+                                                </div>
+                                        @endif
                                     </div>
-                                    <div class="category-part-2 category-common mb--30">
-                                        <h4 class="categories-subtitle"> Cathedral </h4>
-                                        <ul>
-                                            <li><a href="#"> Cathedral of St. Virgin Mary of Mount Carmel Malang </a></li>
-                                            <li><a href="#"> YHS Church </a></li>
-                                            <li><a href="#"> GBI Suropati </a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category-part-3 category-common">
-                                        <h4 class="categories-subtitle"> Convention Hall </h4>
-                                        <ul>
-                                            <li><a href="#"> Graha Cakrawala UM </a></li>
-                                            <li><a href="#"> Gedung Sasana Budaya UM </a></li>
-                                            <li><a href="#"> ​Ijen Suites Resort & Convention </a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category-part-4 category-common">
-                                        <h4 class="categories-subtitle"> Hotel </h4>
-                                        <ul>
-                                            <li><a href="#"> Hotel Savana </a></li>
-                                            <li><a href="#"> Hotel Santika </a></li>
-                                            <li><a href="#"> Hotel Kartika Graha </a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#"><img alt="" src="images/icons/thum3.png"> Photography <i class="zmdi zmdi-chevron-right"></i></a>
-                                <div class="category-menu-dropdown">
-                                    <div class="category-part-1 category-common2 mb--30">
-                                        <h4 class="categories-subtitle"> Photo & Video</h4>
-                                        <ul>
-                                            <li><a href="#"> Nay's Photography </a></li>
-                                            <li><a href="#"> IWillPhotoLab</a></li>
-                                            <li><a href="#"> Tephotomoto Photography</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="category-part-2 category-common2 mb--30">
-                                        <h4 class="categories-subtitle"> Photobooth </h4>
-                                        <ul>
-                                            <li><a href="#"> lolphotobooth.co </a></li>
-                                            <li><a href="#"> Weflo</a></li>
-                                            <li><a href="#"> The HoloGrail</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="mega-banner-img">
-                                        <a href="single-product.html">
-                                            <img src="images/feature-img/5.jpg" alt="">
-                                        </a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#"><img alt="" src="images/icons/thum4.png"> Catering <i class="zmdi zmdi-chevron-right"></i></a>
-                                <div class="category-menu-dropdown">
-                                    <div class="category-menu-dropdown-top">
-                                        <div class="category-part-1 category-common2 mb--30">
-                                            <h4 class="categories-subtitle"> Best Sale </h4>
-                                            <ul>
-                                                <li><a href="#"> Diva Catering </a></li>
-                                                <li><a href="#"> Niki Eco Catering</a></li>
-                                                <li><a href="#"> Enak Lezat Catering</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="category-part-2 category-common2 mb--30">
-                                            <h4 class="categories-subtitle"> Top Rated </h4>
-                                            <ul>
-                                                <li><a href="#"> Diva Catering </a></li>
-                                                <li><a href="#"> Niki Eco Catering</a></li>
-                                                <li><a href="#"> Enak Lezat Catering</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="category-part-3 category-common2 mb--30">
-                                            <h4 class="categories-subtitle">On Sale</h4>
-                                            <ul>
-                                                <li><a href="#"> Diva Catering </a></li>
-                                                <li><a href="#"> Niki Eco Catering</a></li>
-                                                <li><a href="#"> Enak Lezat Catering</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="category-menu-dropdown-bottom">
-                                        <div class="single-category-brand">
-                                            <a href="#"><img src="images/brand/6.png" alt=""></a>
-                                        </div>
-                                        <div class="single-category-brand">
-                                            <a href="#"><img src="images/brand/7.png" alt=""></a>
-                                        </div>
-                                        <div class="single-category-brand">
-                                            <a href="#"><img src="images/brand/8.png" alt=""></a>
-                                        </div>
-                                        <div class="single-category-brand">
-                                            <a href="#"><img src="images/brand/9.png" alt=""></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li><a href="#"><img alt="" src="images/icons/thum5.png"> Decoration <i class="zmdi zmdi-chevron-right"></i></a>
-                                <div class="category-menu-dropdown">
-                                    <div class="category-menu-dropdown-left">
-                                        <div class="category-part-1 category-common mb--30">
-                                            <h4 class="categories-subtitle"> Best Sale </h4>
-                                            <ul>
-                                                <li><a href="#"> Kharisma Decoration </a></li>
-                                                <li><a href="#"> Raindropsdeco </a></li>
-                                                <li><a href="#"> Dekorayasby </a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="category-part-2 category-common mb--30">
-                                            <h4 class="categories-subtitle"> Top Rated </h4>
-                                            <ul>
-                                                <li><a href="#"> ZF Decoration </a></li>
-                                                <li><a href="#"> Red Velvet Decoration </a></li>
-                                                <li><a href="#"> DNA Decoration </a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="category-part-3 category-common">
-                                            <h4 class="categories-subtitle"> On Sale </h4>
-                                            <ul>
-                                                <li><a href="#"> Vineyard Decoration</a></li>
-                                                <li><a href="#"> Edelweiss Decoration </a></li>
-                                                <li><a href="#"> A Plus Decoration</a></li>
-                                            </ul>
-                                        </div>
-                                        <div class="category-part-4 category-common">
-                                            <h4 class="categories-subtitle"> New </h4>
-                                            <ul>
-                                                <li><a href="#"> Mimosa Decoration </a></li>
-                                                <li><a href="#"> Vineyard Decoration</a></li>
-                                                <li><a href="#"> Edelweiss Decoration </a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div class="category-menu-dropdown-right">
-                                        <div class="menu-right-img">
-                                            <a href="#"><img src="images/feature-img/2.png" alt=""></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -228,12 +109,9 @@
                     </div>
                     <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">Mosque</a></li>
-                            <li><a href="#">Cathedral</a></li>
-                            <li><a href="#">Park</a></li>
-                            <li><a href="#">Hotel</a></li>
-                            <li><a href="#">Convention Hall</a></li>
-                            <li><a href="#">ALL</a></li>
+                            @foreach ($array['Venue'] as $key=>$val)
+                                <li><a href="#">{{$key}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -277,130 +155,36 @@
                         <div class="tab-pane active" id="home1">
                             <div class="row">
                                 <div class="product-slider-active owl-carousel">
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/1.png" alt="product images">
-                                                    </a>
+                                    @foreach ($dataVenue as $itemVenue)
+                                        <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
+                                            <div class="product">
+                                                <div class="product__inner">
+                                                    <div class="pro__thumb">
+                                                        <a href="#">
+                                                            <?php $imgData = base64_encode($itemVenue->FILE); ?>
+                                                            <img src='data:image/jpeg;base64, {{$imgData}}' width="270px" height="270px" alt="product images">
+                                                        </a>
+                                                    </div>
+                                                    <div class="product__hover__info">
+                                                        <ul class="product__action">
+                                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                            <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
+                                                <div class="product__details">
+                                                    <h2><a href="product-details.html">{{$itemVenue->NAMA_TOKO_JASA}}</a></h2>
+                                                    <ul class="product__price">
+                                                        <li class="new__price">{{$itemVenue->ALAMAT}} - {{$itemVenue->NOMOR_TELEPON}}</li>
+                                                        {{-- <li class="new__price">Rp399.000</li> --}}
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Masjidil Halal</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">Rp500.000</li>
-                                                    <li class="new__price">Rp399.000</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/2.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Hotel Savana</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="new__price">Rp1.500.000</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/3.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Gedung Sasana Krida UM</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">Rp2.000.000</li>
-                                                    <li class="new__price">Rp1.799.000</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/4.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/5.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        </div> 
+                                    @endforeach
+                                    
+                                    
                                 </div>
                             </div>
                         </div>
@@ -818,21 +602,15 @@
             <div class="col-md-3">
                 <div class="product-categories-all">
                     <div class="product-categories-title">
-                        <h3>BAGS & SHOES</h3>
+                        <h3>Dekorasi</h3>
                     </div>
-                    <div class="product-categories-menu">
+                    {{-- <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">awesome Rings</a></li>
-                            <li><a href="#">Hot Earrings</a></li>
-                            <li><a href="#">Jewelry Sets</a></li>
-                            <li><a href="#">Beads Jewelry</a></li>
-                            <li><a href="#">Men's Watches</a></li>
-                            <li><a href="#">Women’s Watches</a></li>
-                            <li><a href="#">Popular Bracelets</a></li>
-                            <li><a href="#"> Pendant Necklaces</a></li>
-                            <li><a href="#">Children's Watches</a></li>
+                            @foreach ($array['Catering'] as $key=>$val)
+                                <li><a href="#">{{$key}}</a></li>
+                            @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-9">
@@ -874,12 +652,14 @@
                         <div class="tab-pane active" id="home5">
                             <div class="row">
                                 <div class="product-slider-active owl-carousel">
+                                    @foreach ($dataDekorasi as $itemDekorasi)
                                     <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
                                         <div class="product">
                                             <div class="product__inner">
                                                 <div class="pro__thumb">
                                                     <a href="#">
-                                                        <img src="images/product/1.png" alt="product images">
+                                                        <?php $imgData = base64_encode($itemDekorasi->FILE); ?>
+                                                            <img src='data:image/jpeg;base64, {{$imgData}}' width="270px" height="270px" alt="product images">
                                                     </a>
                                                 </div>
                                                 <div class="product__hover__info">
@@ -891,114 +671,14 @@
                                                 </div>
                                             </div>
                                             <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                                <h2><a href="product-details.html">{{ $itemDekorasi->NAMA_TOKO_JASA }}</a></h2>
                                                 <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
+                                                    <li class="new__price">{{ $itemDekorasi->ALAMAT }} - {{ $itemDekorasi->NOMOR_TELEPON}}</li>
                                                 </ul>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/2.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/3.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/4.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/5.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </div> 
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -1491,19 +1171,13 @@
             <div class="col-md-3">
                 <div class="product-categories-all">
                     <div class="product-categories-title">
-                        <h3>kids & MOTHER</h3>
+                        <h3>Fotografer</h3>
                     </div>
                     <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">awesome Rings</a></li>
-                            <li><a href="#">Hot Earrings</a></li>
-                            <li><a href="#">Jewelry Sets</a></li>
-                            <li><a href="#">Beads Jewelry</a></li>
-                            <li><a href="#">Men's Watches</a></li>
-                            <li><a href="#">Women’s Watches</a></li>
-                            <li><a href="#">Popular Bracelets</a></li>
-                            <li><a href="#"> Pendant Necklaces</a></li>
-                            <li><a href="#">Children's Watches</a></li>
+                            @foreach ($array['Fotografer'] as $key=>$val)
+                                <li><a href="#">{{$key}}</a></li>
+                            @endforeach
                         </ul>
                     </div>
                 </div>
@@ -1550,12 +1224,14 @@
                         <div class="tab-pane active" id="home9">
                             <div class="row">
                                 <div class="product-slider-active2">
+                                    @foreach ($dataFotografer as $itemFotografer)
                                     <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
                                         <div class="product">
                                             <div class="product__inner">
                                                 <div class="pro__thumb">
                                                     <a href="#">
-                                                        <img src="images/product/3.png" alt="product images">
+                                                        <?php $imgData = base64_encode($itemFotografer->FILE); ?>
+                                                        <img src='data:image/jpeg;base64, {{$imgData}}' width="270px" height="270px" alt="product images">
                                                     </a>
                                                 </div>
                                                 <div class="product__hover__info">
@@ -1567,64 +1243,14 @@
                                                 </div>
                                             </div>
                                             <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                                <h2><a href="product-details.html">{{$itemFotografer->NAMA_TOKO_JASA}}</a></h2>
                                                 <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
+                                                    <li class="new__price">{{$itemFotografer->ALAMAT}} - {{$itemFotografer->NOMOR_TELEPON}}</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/4.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/5.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -1892,21 +1518,15 @@
             <div class="col-md-3">
                 <div class="product-categories-all">
                     <div class="product-categories-title">
-                        <h3>kids & MOTHER</h3>
+                        <h3>Catering</h3>
                     </div>
-                    <div class="product-categories-menu">
+                    {{-- <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">awesome Rings</a></li>
-                            <li><a href="#">Hot Earrings</a></li>
-                            <li><a href="#">Jewelry Sets</a></li>
-                            <li><a href="#">Beads Jewelry</a></li>
-                            <li><a href="#">Men's Watches</a></li>
-                            <li><a href="#">Women’s Watches</a></li>
-                            <li><a href="#">Popular Bracelets</a></li>
-                            <li><a href="#"> Pendant Necklaces</a></li>
-                            <li><a href="#">Children's Watches</a></li>
+                            @foreach ($array[''] as $key=>$val)
+                                <li><a href="#">{{$key}}</a></li>
+                            @endforeach
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <div class="col-md-9">
@@ -1951,12 +1571,14 @@
                         <div class="tab-pane active" id="home9">
                             <div class="row">
                                 <div class="product-slider-active2">
+                                    @foreach ($dataCatering as $itemCatering)
                                     <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
                                         <div class="product">
                                             <div class="product__inner">
                                                 <div class="pro__thumb">
                                                     <a href="#">
-                                                        <img src="images/product/3.png" alt="product images">
+                                                        <?php $imgData = base64_encode($itemCatering->FILE); ?>
+                                                        <img src='data:image/jpeg;base64, {{$imgData}}' width="270px" height="270px" alt="product images">
                                                     </a>
                                                 </div>
                                                 <div class="product__hover__info">
@@ -1968,64 +1590,15 @@
                                                 </div>
                                             </div>
                                             <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                                <h2><a href="product-details.html">{{$itemCatering->NAMA_TOKO_JASA}}</a></h2>
                                                 <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
+                                                    <li class="new__price">{{$itemCatering->ALAMAT}} - {{$itemCatering->NOMOR_TELEPON}}</li>
                                                 </ul>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/4.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                                        <div class="product">
-                                            <div class="product__inner">
-                                                <div class="pro__thumb">
-                                                    <a href="#">
-                                                        <img src="images/product/5.png" alt="product images">
-                                                    </a>
-                                                </div>
-                                                <div class="product__hover__info">
-                                                    <ul class="product__action">
-                                                        <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                                        <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__details">
-                                                <h2><a href="product-details.html">Simple Black Clock</a></h2>
-                                                <ul class="product__price">
-                                                    <li class="old__price">$16.00</li>
-                                                    <li class="new__price">$10.00</li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    @endforeach
+
                                 </div>
                             </div>
                         </div>

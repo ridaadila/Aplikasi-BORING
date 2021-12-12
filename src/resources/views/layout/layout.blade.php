@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
                             <div class="logo">
-                                <a href="{{ route('home') }}">
+                                <a href="{{url('/')}}">
                                     <img src="images/logo/logo.png" alt="logo">
                                 </a>
                             </div>
@@ -54,14 +54,14 @@
                         <div class="col-md-8 col-lg-8 col-sm-6 col-xs-6">
                             <nav class="mainmenu__nav hidden-xs hidden-sm">
                                 <ul class="main__menu">
-                                    <li class="drop"><a href="{{ route('home') }}">Home</a></li>
-                                    <li class="drop"><a href="{{ route('venue') }}">Venue</a>
+                                    <li class="drop"><a href="{{url('/')}}">Home</a></li>
+                                    <li class="drop"><a href="{{ url('venue') }}">Venue</a>
                                     </li>
-                                    <li class="drop"><a href="{{ route('decor') }}">Decoration</a>
+                                    <li class="drop"><a href="{{ url('decoration') }}">Decoration</a>
                                     </li>
-                                    <li class="drop"><a href="{{ route('photo') }}">Photography</a>
+                                    <li class="drop"><a href="{{ url('photography') }}">Photography</a>
                                     </li>
-                                    <li class="drop"><a href="{{ route('catering') }}">Catering</a>
+                                    <li class="drop"><a href="{{ url('catering') }}">Catering</a>
                                     </li>
                                     <li class="drop"><a href="#">About</a>
                                         <ul class="dropdown">
@@ -79,7 +79,7 @@
                             <div class="mobile-menu clearfix visible-xs visible-sm">
                                 <nav id="mobile_dropdown">
                                     <ul>
-                                        <li><a href="{{ route('home') }}">Home</a></li>
+                                        <li><a href="{{url('/')}}">Home</a></li>
                                         <li><a href="#">portfolio</a>
                                             <ul>
                                                 <li><a href="portfolio-card-box-2.html">portfolio</a></li>
@@ -158,7 +158,7 @@
                     </div>
                     <div class="off__contact">
                         <div class="logo">
-                            <a href="{{ route('home') }}">
+                            <a href="{{ url('/') }}">
                                 <img src="images/logo/logo.png" alt="logo">
                             </a>
                         </div>
@@ -250,7 +250,7 @@
                         <div class="col-md-3 col-lg-3 col-sm-6">
                             <div class="ft__widget">
                                 <div class="ft__logo">
-                                    <a href="{{ route('home') }}">
+                                    <a href="{{ url('/') }}">
                                         <img src="images/logo/logo.png" alt="footer logo">
                                     </a>
                                 </div>
@@ -357,7 +357,7 @@
                                     All Right Reserved.</p>
                                 </div>
                                 <ul class="footer__menu">
-                                    <li><a href="{{ route('home') }}">Home</a></li>
+                                    <li><a href="{{ url('/') }}">Home</a></li>
                                     <li><a href="shop.html">Product</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
