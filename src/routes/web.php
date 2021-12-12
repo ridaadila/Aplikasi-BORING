@@ -43,6 +43,10 @@ Route::get('/review', function () {
     return view('boring/review');
 })->name('review');
 
+Route::get('/profile', function () {
+    return view('boring/customer/profile');
+})->name('profile');
+
 
 // // Vendor
 // Route::get('/venue', function () {
