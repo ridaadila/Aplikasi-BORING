@@ -36,7 +36,7 @@
                                     <span class="ti-location-pin"></span>
                                 </div>
                                 <div class="contact__details">
-                                    <p>Location : <br> 77, seventh avenue, Brat road USA.</p>
+                                    <p>Location : <br> Surabaya.</p>
                                 </div>
                             </div>
                             <!-- End Single Adress -->
@@ -48,7 +48,7 @@
                                     <span class="ti-mobile"></span>
                                 </div>
                                 <div class="contact__details">
-                                    <p> Phone : <br><a href="#">+012 345 678 102 </a></p>
+                                    <p> Phone : <br><a>082244422684 </a></p>
                                 </div>
                             </div>
                             <!-- End Single Adress -->
@@ -58,7 +58,7 @@
                                     <span class="ti-email"></span>
                                 </div>
                                 <div class="contact__details">
-                                    <p> Mail :<br><a href="#">info@example.com</a></p>
+                                    <p> Mail :<br><a>boringapp@google.com</a></p>
                                 </div>
                             </div>
                             <!-- End Single Adress -->

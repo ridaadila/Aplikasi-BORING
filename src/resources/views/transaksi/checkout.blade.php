@@ -30,7 +30,7 @@
                     <!-- Start Payment Box -->
                     <div class="checkout-form">
                         <h2 class="section-title-3">payment details</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur kgjhyt</p>
+                        <p>Please fill this form to checkout.</p>
                         <div class="payment-form-inner">
                             <div class="single-checkout-box">
                                 <input type="text" placeholder="Name on Card*">
@@ -69,7 +69,7 @@
                     <!-- End Payment Way -->
                 </div>
             </div>
-            <div class="col-md-4 col-lg-4">
+            {{-- <div class="col-md-4 col-lg-4">
                 <div class="checkout-right-sidebar">
                     <div class="our-important-note">
                         <h2 class="section-title-3">Note :</h2>
@@ -87,7 +87,7 @@
                         <a href="phone:+8801722889963">+012 345 678 102 </a>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </section>

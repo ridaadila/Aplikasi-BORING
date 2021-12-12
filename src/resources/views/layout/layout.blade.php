@@ -63,7 +63,7 @@
                                     </li>
                                     <li class="drop"><a href="{{ route('catering') }}">Catering</a>
                                     </li>
-                                    <li class="drop"><a href="#">About</a>
+                                    <li class="drop"><a href="{{ route('about') }}">About</a>
                                         <ul class="dropdown">
                                             <li><a href="{{ route('about') }}">about</a></li>
                                             <li><a href="{{ route('contact') }}">contact</a></li>
@@ -80,33 +80,16 @@
                                 <nav id="mobile_dropdown">
                                     <ul>
                                         <li><a href="{{ route('home') }}">Home</a></li>
-                                        <li><a href="#">portfolio</a>
+                                        <li><a href="{{ route('venue') }}">Venue</a></li>
+                                        <li><a href="{{ route('decor') }}">Decoration</a></li>
+                                        <li><a href="{{ route('photo') }}">Photography</a></li>
+                                        <li><a href="{{ route('catering') }}">Catering</a></li>
+                                        <li><a href="{{ route('about') }}">About</a>
                                             <ul>
-                                                <li><a href="portfolio-card-box-2.html">portfolio</a></li>
-                                                <li><a href="single-portfolio.html">Single portfolio</a></li>
+                                                <li><a href="{{ route('contact') }}">Contact</a></li>
+                                                <li><a href="{{ route('review') }}">Review</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="blog.html">blog</a>
-                                            <ul>
-                                                <li><a href="blog.html">blog 3 column</a></li>
-                                                <li><a href="blog-details.html">Blog details</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages</a>
-                                            <ul>
-                                                <li><a href="about.html">about</a></li>
-                                                <li><a href="customer-review.html">customer review</a></li>
-                                                <li><a href="shop.html">shop</a></li>
-                                                <li><a href="shop-sidebar.html">shop sidebar</a></li>
-                                                <li><a href="product-details.html">product details</a></li>
-                                                <li><a href="{{ route('cart') }}">cart</a></li>
-                                                <li><a href="wishlist.html">wishlist</a></li>
-                                                <li><a href="{{ route('checkout') }}">checkout</a></li>
-                                                <li><a href="team.html">team</a></li>
-                                                <li><a href="{{ route('login') }}">login & register</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="contact.html">contact</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -169,7 +152,7 @@
                         {{-- Ada kalo udah login --}}
                         <li class="shp__checkout"><a href="{{ route('profile') }}">Profile</a></li>
                     </ul>
-                    <div class="offset__sosial__share">
+                    {{-- <div class="offset__sosial__share">
                         <h4 class="offset__title">Follow Us On Social</h4>
                         <ul class="off__soaial__link">
                             <li><a class="bg--twitter" href="#"  title="Twitter"><i class="zmdi zmdi-twitter"></i></a></li>
@@ -182,7 +165,7 @@
 
                             <li><a class="bg--google" href="#" title="Google"><i class="zmdi zmdi-google"></i></a></li>
                         </ul>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
             <!-- End Offset MEnu -->
@@ -201,7 +184,6 @@
                             </div>
                             <div class="shp__pro__details">
                                 <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                                <span class="quantity">QTY: 1</span>
                                 <span class="shp__price">$105.00</span>
                             </div>
                             <div class="remove__btn">
@@ -216,7 +198,6 @@
                             </div>
                             <div class="shp__pro__details">
                                 <h2><a href="product-details.html">Brone Candle</a></h2>
-                                <span class="quantity">QTY: 1</span>
                                 <span class="shp__price">$25.00</span>
                             </div>
                             <div class="remove__btn">
@@ -262,7 +243,7 @@
                                                 <i class="zmdi zmdi-pin"></i>
                                             </div>
                                             <div class="address-text">
-                                                <p>194 Main Rd T, FS Rayed <br> VIC 3057, USA</p>
+                                                <p>Surabaya</p>
                                             </div>
                                         </li>
                                         <li>
@@ -270,7 +251,7 @@
                                                 <i class="zmdi zmdi-email"></i>
                                             </div>
                                             <div class="address-text">
-                                                <a href="#"> info@example.com</a>
+                                                <a href="#"> boringapp@google.com</a>
                                             </div>
                                         </li>
                                         <li>
@@ -278,17 +259,11 @@
                                                 <i class="zmdi zmdi-phone-in-talk"></i>
                                             </div>
                                             <div class="address-text">
-                                                <p>+012 345 678 102 </p>
+                                                <p>082244422684</p>
                                             </div>
                                         </li>
                                     </ul>
                                 </div>
-                                <ul class="social__icon">
-                                    <li><a href="#"><i class="zmdi zmdi-twitter"></i></a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-facebook"></i></a></li>
-                                    <li><a href="#"><i class="zmdi zmdi-google-plus"></i></a></li>
-                                </ul>
                             </div>
                         </div>
                         <!-- End Single Footer Widget -->
@@ -297,12 +272,10 @@
                             <div class="ft__widget">
                                 <h2 class="ft__title">Categories</h2>
                                 <ul class="footer-categories">
-                                    <li><a href="shop-sidebar.html">Men</a></li>
-                                    <li><a href="shop-sidebar.html">Women</a></li>
-                                    <li><a href="shop-sidebar.html">Accessories</a></li>
-                                    <li><a href="shop-sidebar.html">Shoes</a></li>
-                                    <li><a href="shop-sidebar.html">Dress</a></li>
-                                    <li><a href="shop-sidebar.html">Denim</a></li>
+                                    <li><a href="{{ route('venue') }}">Venue</a></li>
+                                    <li><a href="{{ route('decor') }}">Decoration</a></li>
+                                    <li><a href="{{ route('photo') }}">Photography</a></li>
+                                    <li><a href="{{ route('catering') }}">Catering</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -311,21 +284,17 @@
                             <div class="ft__widget">
                                 <h2 class="ft__title">Infomation</h2>
                                 <ul class="footer-categories">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="#">Terms & Conditions</a></li>
-                                    <li><a href="#">Returns & Exchanges</a></li>
-                                    <li><a href="#">Shipping & Delivery</a></li>
-                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="{{ route('about') }}">About Us</a></li>
+                                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>
                         <!-- Start Single Footer Widget -->
                         <div class="col-md-3 col-lg-3 col-lg-offset-1 col-sm-6 smt-30 xmt-30">
                             <div class="ft__widget">
-                                <h2 class="ft__title">Newsletter</h2>
+                                <h2 class="ft__title">Broadcast</h2>
                                 <div class="newsletter__form">
-                                    <p>Subscribe to our newsletter and get 10% off your first purchase .</p>
+                                    <p>Subscribe to our broadcast and get 10% off your first purchase.</p>
                                     <div class="input__box">
                                         <div id="mc_embed_signup">
                                             <form action="#" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
@@ -359,8 +328,7 @@
                                 </div>
                                 <ul class="footer__menu">
                                     <li><a href="{{ route('home') }}">Home</a></li>
-                                    <li><a href="shop.html">Product</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="{{ route('contact') }}">Contact Us</a></li>
                                 </ul>
                             </div>
                         </div>

@@ -18,7 +18,7 @@
                                         <div class="slider__inner">
                                             <h1>New<span class="text--theme">Wedding Venue</span></h1>
                                             <div class="slider__btn">
-                                                <a class="htc__btn" href="cart.html">shop now</a>
+                                                <a class="htc__btn" href="{{ route('cart') }}">shop now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -34,7 +34,7 @@
                                         <div class="slider__inner">
                                             <h1>New Catering <span class="text--theme">Collection</span></h1>
                                             <div class="slider__btn">
-                                                <a class="htc__btn" href="cart.html">shop now</a>
+                                                <a class="htc__btn" href="{{ route('cart') }}">shop now</a>
                                             </div>
                                         </div>
                                     </div>
@@ -107,11 +107,11 @@
                                             <li><a href="#"> The HoloGrail</a></li>
                                         </ul>
                                     </div>
-                                    <div class="mega-banner-img">
+                                    {{-- <div class="mega-banner-img">
                                         <a href="single-product.html">
                                             <img src="images/feature-img/5.jpg" alt="">
                                         </a>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </li>
                             <li><a href="#"><img alt="" src="images/icons/thum4.png"> Catering <i class="zmdi zmdi-chevron-right"></i></a>
@@ -160,7 +160,7 @@
                             </li>
                             <li><a href="#"><img alt="" src="images/icons/thum5.png"> Decoration <i class="zmdi zmdi-chevron-right"></i></a>
                                 <div class="category-menu-dropdown">
-                                    <div class="category-menu-dropdown-left">
+                                    {{-- <div class="category-menu-dropdown-left"> --}}
                                         <div class="category-part-1 category-common mb--30">
                                             <h4 class="categories-subtitle"> Best Sale </h4>
                                             <ul>
@@ -193,12 +193,12 @@
                                                 <li><a href="#"> Edelweiss Decoration </a></li>
                                             </ul>
                                         </div>
-                                    </div>
-                                    <div class="category-menu-dropdown-right">
+                                    {{-- </div> --}}
+                                    {{-- <div class="category-menu-dropdown-right">
                                         <div class="menu-right-img">
                                             <a href="#"><img src="images/feature-img/2.png" alt=""></a>
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </li>
                         </ul>
@@ -288,7 +288,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -313,7 +313,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -337,7 +337,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -362,7 +362,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -387,7 +387,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -418,7 +418,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -443,7 +443,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -468,7 +468,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -493,7 +493,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -518,7 +518,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -549,7 +549,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -574,7 +574,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -599,7 +599,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -624,7 +624,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -649,7 +649,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -680,7 +680,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -705,7 +705,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -730,7 +730,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -755,7 +755,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -780,7 +780,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -818,19 +818,13 @@
             <div class="col-md-3">
                 <div class="product-categories-all">
                     <div class="product-categories-title">
-                        <h3>BAGS & SHOES</h3>
+                        <h3>DECORATION</h3>
                     </div>
                     <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">awesome Rings</a></li>
-                            <li><a href="#">Hot Earrings</a></li>
-                            <li><a href="#">Jewelry Sets</a></li>
-                            <li><a href="#">Beads Jewelry</a></li>
-                            <li><a href="#">Men's Watches</a></li>
-                            <li><a href="#">Women’s Watches</a></li>
-                            <li><a href="#">Popular Bracelets</a></li>
-                            <li><a href="#"> Pendant Necklaces</a></li>
-                            <li><a href="#">Children's Watches</a></li>
+                            <li><a href="#">Akad Nikah</a></li>
+                            <li><a href="#">Resepsi</a></li>
+                            <li><a href="#">Engagement</a></li>
                         </ul>
                     </div>
                 </div>
@@ -885,7 +879,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -910,7 +904,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -935,7 +929,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -960,7 +954,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -985,7 +979,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1016,7 +1010,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1041,7 +1035,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1066,7 +1060,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1091,7 +1085,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1116,7 +1110,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1141,7 +1135,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1172,7 +1166,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1197,7 +1191,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1222,7 +1216,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1247,7 +1241,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1272,7 +1266,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1297,7 +1291,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1328,7 +1322,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1353,7 +1347,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1378,7 +1372,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1403,7 +1397,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1428,7 +1422,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1453,7 +1447,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1491,19 +1485,13 @@
             <div class="col-md-3">
                 <div class="product-categories-all">
                     <div class="product-categories-title">
-                        <h3>kids & MOTHER</h3>
+                        <h3>PHOTOGRAPHY</h3>
                     </div>
                     <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">awesome Rings</a></li>
-                            <li><a href="#">Hot Earrings</a></li>
-                            <li><a href="#">Jewelry Sets</a></li>
-                            <li><a href="#">Beads Jewelry</a></li>
-                            <li><a href="#">Men's Watches</a></li>
-                            <li><a href="#">Women’s Watches</a></li>
-                            <li><a href="#">Popular Bracelets</a></li>
-                            <li><a href="#"> Pendant Necklaces</a></li>
-                            <li><a href="#">Children's Watches</a></li>
+                            <li><a href="#">Pre-Wedding</a></li>
+                            <li><a href="#">Photobooth</a></li>
+                            <li><a href="#">Photo & Video</a></li>
                         </ul>
                     </div>
                 </div>
@@ -1561,7 +1549,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1586,7 +1574,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1611,7 +1599,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1642,7 +1630,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1667,7 +1655,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1692,7 +1680,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1723,7 +1711,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1748,7 +1736,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1773,7 +1761,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1804,7 +1792,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1829,7 +1817,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1854,7 +1842,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1889,27 +1877,19 @@
 <section class="htc__product__area ptb--100 bg__white">
     <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            {{-- <div class="col-md-3">
                 <div class="product-categories-all">
                     <div class="product-categories-title">
-                        <h3>kids & MOTHER</h3>
+                        <h3>catering</h3>
                     </div>
                     <div class="product-categories-menu">
                         <ul>
-                            <li><a href="#">awesome Rings</a></li>
-                            <li><a href="#">Hot Earrings</a></li>
-                            <li><a href="#">Jewelry Sets</a></li>
-                            <li><a href="#">Beads Jewelry</a></li>
-                            <li><a href="#">Men's Watches</a></li>
-                            <li><a href="#">Women’s Watches</a></li>
-                            <li><a href="#">Popular Bracelets</a></li>
-                            <li><a href="#"> Pendant Necklaces</a></li>
-                            <li><a href="#">Children's Watches</a></li>
+                            <li><a href="#">Resepsi</a></li>
                         </ul>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-9">
+            </div> --}}
+            <div class="col-md-12">
                 <div class="product-style-tab">
                     <div class="product-tab-list">
                         <!-- Nav tabs -->
@@ -1962,7 +1942,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -1987,7 +1967,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2012,7 +1992,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2043,7 +2023,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2068,7 +2048,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2093,7 +2073,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2124,7 +2104,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2149,7 +2129,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2174,7 +2154,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2205,7 +2185,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2230,7 +2210,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
@@ -2255,7 +2235,7 @@
                                                 <div class="product__hover__info">
                                                     <ul class="product__action">
                                                         <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                                        <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
+                                                        <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
                                                         <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
                                                     </ul>
                                                 </div>
