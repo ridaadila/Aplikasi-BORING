@@ -11243,7 +11243,7 @@ textarea + .valid {
 }
 
 .nav-sm .nav.child_menu li.active,.nav-sm .nav.side-menu li.active-sm{
-  border-right:5px solid #E2E5E2;
+  border-right:5px solid #f2d3d3;
 }
 
 .nav-sm ul.nav.child_menu ul,.nav-sm .nav.side-menu li.active-sm ul ul{
@@ -11253,7 +11253,7 @@ textarea + .valid {
 }
 
 .nav-sm>.nav.side-menu>li.active-sm>a{
-  color:#E2E5E2 !important;
+  color:#f2d3d3 !important;
 }
 
 .nav-sm .nav.side-menu li a i.toggle-up{
@@ -11547,7 +11547,7 @@ a,a:visited,a:focus,a:active,:visited,:focus,:active,.btn:focus,.btn:active:focu
 .nav.child_menu{display:none}
 
 .nav.child_menu li:hover,.nav.child_menu li.active{
-  background-color: #E2E5E2;
+  background-color: #f2d3d3;
 }
 
 .nav.child_menu li{padding-left:36px}
@@ -11598,7 +11598,7 @@ a,a:visited,a:focus,a:active,:visited,:focus,:active,.btn:focus,.btn:active:focu
 }
 
 .nav.side-menu>li.current-page,.nav.side-menu>li.active{
-  border-right:5px solid #E2E5E2;
+  border-right:5px solid #f2d3d3;
 }
 
 .nav li.current-page{background:rgba(255,255,255,0.05)}.nav li li li.current-page{background:none}
@@ -11606,7 +11606,7 @@ a,a:visited,a:focus,a:active,:visited,:focus,:active,.btn:focus,.btn:active:focu
 .nav li li.current-page a{
   /* color:#fff; */
   color: #ea9999;
-  background-color: #E2E5E2;
+  background-color: #f2d3d3;
 }
 
 .nav.side-menu>li.active>a{
