@@ -2,7 +2,7 @@
 
 @section('content')
 <!-- Start Bradcaump area -->
-<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(images/bg/2.jpg) no-repeat scroll center center / cover ;">
+<div class="ht__bradcaump__area" style="background-color: #f3d5d5;">
     <div class="ht__bradcaump__wrap">
         <div class="container">
             <div class="row">
@@ -27,44 +27,8 @@
         <div class="row">
             <div class="col-md-8 col-lg-8">
                 <div class="ckeckout-left-sidebar">
-                    <!-- Start Checkbox Area -->
-                    <div class="checkout-form">
-                        <h2 class="section-title-3">Billing details</h2>
-                        <div class="checkout-form-inner">
-                            <div class="single-checkout-box">
-                                <input type="text" placeholder="First Name*">
-                                <input type="text" placeholder="Last Name*">
-                            </div>
-                            <div class="single-checkout-box">
-                                <input type="email" placeholder="Emil*">
-                                <input type="text" placeholder="Phone*">
-                            </div>
-                            <div class="single-checkout-box">
-                                <textarea name="message" placeholder="Message*"></textarea>
-                            </div>
-                            <div class="single-checkout-box select-option mt--40">
-                                <select>
-                                    <option>Country*</option>
-                                    <option>Bangladesh</option>
-                                    <option>Bangladesh</option>
-                                    <option>Bangladesh</option>
-                                    <option>Bangladesh</option>
-                                </select>
-                                <input type="text" placeholder="Company Name*">
-                            </div>
-                            <div class="single-checkout-box">
-                                <input type="email" placeholder="State*">
-                                <input type="text" placeholder="Zip Code*">
-                            </div>
-                            <div class="single-checkout-box checkbox">
-                                <input id="remind-me" type="checkbox">
-                                <label for="remind-me"><span></span>Create a Account ?</label>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Checkbox Area -->
                     <!-- Start Payment Box -->
-                    <div class="payment-form">
+                    <div class="checkout-form">
                         <h2 class="section-title-3">payment details</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur kgjhyt</p>
                         <div class="payment-form-inner">

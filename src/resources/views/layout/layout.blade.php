@@ -115,9 +115,9 @@
                         <div class="col-md-2 col-sm-4 col-xs-3">
                             <ul class="menu-extra">
                                 <li class="search search__open hidden-xs"><span class="ti-search"></span></li>
-                                <li><a href="{{ route('login') }}"><span class="ti-user"></span></a></li>
+                                <li class="toggle__menu hidden-xs hidden-sm"><span class="ti-user"></span></a></li>
                                 <li class="cart__menu"><span class="ti-shopping-cart"></span></li>
-                                <li class="toggle__menu hidden-xs hidden-sm"><span class="ti-menu"></span></li>
+                                {{-- <li class="toggle__menu hidden-xs hidden-sm"><span class="ti-menu"></span></li> --}}
                             </ul>
                         </div>
                     </div>
@@ -162,11 +162,12 @@
                                 <img src="images/logo/logo.png" alt="logo">
                             </a>
                         </div>
-                        <p>Are you a vendor?</p>
                     </div>
                     <ul class="shopping__btn">
                         <li><a href="{{ route('login') }}">Become a Vendor</a></li>
-                        {{-- <li class="shp__checkout"><a href="{{ route('checkout') }}">Checkout</a></li> --}}
+                        <li><a href="{{ route('login') }}">Become a Customer</a></li>
+                        {{-- Ada kalo udah login --}}
+                        <li class="shp__checkout"><a href="{{ route('profile') }}">Profile</a></li>
                     </ul>
                     <div class="offset__sosial__share">
                         <h4 class="offset__title">Follow Us On Social</h4>
