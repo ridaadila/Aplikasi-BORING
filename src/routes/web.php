@@ -25,9 +25,6 @@ Route::get('/decoration', [DekorasiController::class, 'index']);
 Route::get('/photography', [FotograferController::class, 'index']);
 Route::get('/catering', [CateringController::class, 'index']);
 
-Route::get('/', function () {
-    return view('boring/home');
-})->name('home');
 /*
 start kana
 */
