@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Auth;
 class CustomAuthController extends Controller
 {
 
-    public function index()
+    public function login()
     {
-        return view('boring.login-register');
+        return view('boring.login');
     }
 
 
@@ -37,7 +37,7 @@ class CustomAuthController extends Controller
 
     public function registration()
     {
-        return view('boring.login-register');
+        return view('boring.register');
     }
 
 

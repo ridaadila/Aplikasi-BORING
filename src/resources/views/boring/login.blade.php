@@ -12,7 +12,6 @@
                     <div class="col-md-6 col-md-offset-3">
                         <ul class="login__register__menu" role="tablist">
                             <li role="presentation" class="login active"><a href="#login" role="tab" data-toggle="tab">Login</a></li>
-                            <li role="presentation" class="register"><a href="#register" role="tab" data-toggle="tab">Register</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,24 +31,6 @@
                                 </a> -->
                                     </div>
 
-                                </form>
-                            </div>
-                            <!-- End Single Content -->
-
-                            <!-- Start Single Content -->
-                            <div id="register" role="tabpanel" class="single__tabs__panel tab-pane fade">
-                                <form class="login" method="post" action="{{ route('register.custom') }}">
-                                    <input type="text" placeholder="Nama*" id="nama" name="nama" value="">
-                                    <input type="text" placeholder="Username*" id="username" name="username" value="">
-                                    <input type="email" placeholder="Email*" id="email" name="email" value="">
-                                    <input type="password" placeholder="Password*" id="password" name="password">
-
-                                    <div class="htc__login__btn">
-                                        <a href="{{ route('home') }}">Register</a>
-                                        <!-- <a>
-                                <input type="submit" value="Register" style="border-style: none"/>
-                                </a> -->
-                                    </div>
                                 </form>
                             </div>
                             <!-- End Single Content -->

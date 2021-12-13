@@ -6,6 +6,7 @@ use App\Http\Controllers\VenueController;
 use App\Http\Controllers\DekorasiController;
 use App\Http\Controllers\FotograferController;
 use App\Http\Controllers\CateringController;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +19,7 @@ use App\Http\Controllers\CateringController;
 |
 */
 
-Route::get('/', [BerandaController::class, 'index']);
+Route::get('/', [BerandaController::class, 'index'])->name('home');
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/venue', [VenueController::class, 'index']);
 Route::get('/decoration', [DekorasiController::class, 'index']);
@@ -29,7 +30,7 @@ Route::get('/catering', [CateringController::class, 'index']);
 start kana
 */
 Route::get('/dashboard', [CustomAuthController::class, 'dashboard']);
-Route::get('/login', [CustomAuthController::class, 'index'])->name('login');
+Route::get('/login', [CustomAuthController::class, 'login'])->name('login');
 Route::post('/custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
 Route::get('/registration', [CustomAuthController::class, 'registration'])->name('register-user');
 Route::post('/custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
