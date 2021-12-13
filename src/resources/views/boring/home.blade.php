@@ -63,7 +63,7 @@
                                                     <h4 class="categories-subtitle"> {{ ($k=="foto_video") ? "Foto video" : $k}} </h4>
                                                     <ul>
                                                         @foreach ($v as $item)
-                                                            <li><a href="#"> {{$item['nama_toko_jasa']}} </a></li>
+                                                            <li><a href="{{url('detail/' . $item['id_penyedia_layanan'])}}"> {{$item['nama_toko_jasa']}} </a></li>
                                                         @endforeach
                                                     </ul>
                                                 </div>
@@ -74,7 +74,7 @@
                                                     <h4 class="categories-subtitle"> {{$key}} </h4>
                                                     <ul>
                                                         @foreach ($value as $item)
-                                                            <li><a href="#"> {{$item['nama_toko_jasa']}} </a></li>
+                                                            <li><a href="{{url('detail/' . $item['id_penyedia_layanan'])}}"> {{$item['nama_toko_jasa']}} </a></li>
                                                         @endforeach 
                                                     </ul>
                                                 </div>

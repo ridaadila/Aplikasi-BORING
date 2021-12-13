@@ -52,21 +52,25 @@
                     <li><a><i class="fa fa-building"></i> Venue <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                         <li><a href="{{url('list/venue')}}">Daftar Venue</a></li>
+                        <li><a href="{{url('list/venue/product')}}">Daftar Produk atau Paket</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-leaf"></i> Decoration <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                         <li><a href="{{url('list/decoration')}}">Daftar Decoration</a></li>
+                        <li><a href="{{url('list/decoration/product')}}">Daftar Produk atau Paket</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-camera"></i> Photography <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                         <li><a href="{{url('list/photography')}}">Daftar Photography</a></li>
+                        <li><a href="{{url('list/photography/product')}}">Daftar Produk atau Paket</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-cutlery"></i> Catering <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                         <li><a href="{{url('list/catering')}}">Daftar Catering</a></li>
+                        <li><a href="{{url('list/catering/product')}}">Daftar Produk atau Paket</a></li>
                         </ul>
                     </li>
                     </ul>

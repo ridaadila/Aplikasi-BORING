@@ -6,6 +6,10 @@ use App\Http\Controllers\VenueController;
 use App\Http\Controllers\DekorasiController;
 use App\Http\Controllers\FotograferController;
 use App\Http\Controllers\CateringController;
+use App\Http\Controllers\ProdukCateringController;
+use App\Http\Controllers\ProdukDekorasiController;
+use App\Http\Controllers\ProdukFotograferController;
+use App\Http\Controllers\ProdukVenueController;
 use App\Http\Controllers\CustomAuthController;
 
 /*
@@ -20,6 +24,7 @@ use App\Http\Controllers\CustomAuthController;
 */
 
 Route::get('/', [BerandaController::class, 'index'])->name('home');
+Route::get('/detail/{id}', [BerandaController::class, 'detail']);
 Route::get('/login', [AuthController::class, 'login']);
 Route::get('/venue', [VenueController::class, 'index']);
 Route::get('/decoration', [DekorasiController::class, 'index']);
@@ -74,32 +79,56 @@ Route::get('/admin', function () {
 })->name('admin');
 
 Route::get('/list/venue', [VenueController::class, 'adminList'])->name('venue.list');
+Route::get('/list/venue/product', [ProdukVenueController::class, 'adminList']);
 Route::get('/list/venue/create', [VenueController::class, 'showCreate']);
 Route::post('/list/venue/insert', [VenueController::class, 'insert']);
 Route::post('/list/venue/update', [VenueController::class, 'update']);
 Route::get('/list/venue/edit/{id}', [VenueController::class, 'showUpdate']);
 Route::get('/list/venue/delete/{id}', [VenueController::class, 'delete']);
+Route::get('/list/venue/product/create', [ProdukVenueController::class, 'showCreate']);
+Route::post('/list/venue/product/insert', [ProdukVenueController::class, 'insert']);
+Route::post('/list/venue/product/update', [ProdukVenueController::class, 'update']);
+Route::get('/list/venue/product/edit/{id}', [ProdukVenueController::class, 'showUpdate']);
+Route::get('/list/venue/product/delete/{id}', [ProdukVenueController::class, 'delete']);
 
 Route::get('/list/decoration', [DekorasiController::class, 'adminList']);
+Route::get('/list/decoration/product', [ProdukDekorasiController::class, 'adminList']);
 Route::get('/list/decoration/create', [DekorasiController::class, 'showCreate']);
 Route::post('/list/decoration/insert', [DekorasiController::class, 'insert']);
 Route::post('/list/decoration/update', [DekorasiController::class, 'update']);
 Route::get('/list/decoration/edit/{id}', [DekorasiController::class, 'showUpdate']);
 Route::get('/list/decoration/delete/{id}', [DekorasiController::class, 'delete']);
+Route::get('/list/decoration/product/create', [ProdukDekorasiController::class, 'showCreate']);
+Route::post('/list/decoration/product/insert', [ProdukDekorasiController::class, 'insert']);
+Route::post('/list/decoration/product/update', [ProdukDekorasiController::class, 'update']);
+Route::get('/list/decoration/product/edit/{id}', [ProdukDekorasiController::class, 'showUpdate']);
+Route::get('/list/decoration/product/delete/{id}', [ProdukDekorasiController::class, 'delete']);
 
 Route::get('/list/catering', [CateringController::class, 'adminList']);
+Route::get('/list/catering/product', [ProdukCateringController::class, 'adminList']);
 Route::get('/list/catering/create', [CateringController::class, 'showCreate']);
 Route::post('/list/catering/insert', [CateringController::class, 'insert']);
 Route::post('/list/catering/update', [CateringController::class, 'update']);
 Route::get('/list/catering/edit/{id}', [CateringController::class, 'showUpdate']);
 Route::get('/list/catering/delete/{id}', [CateringController::class, 'delete']);
+Route::get('/list/catering/product/create', [ProdukCateringController::class, 'showCreate']);
+Route::post('/list/catering/product/insert', [ProdukCateringController::class, 'insert']);
+Route::post('/list/catering/product/update', [ProdukCateringController::class, 'update']);
+Route::get('/list/catering/product/edit/{id}', [ProdukCateringController::class, 'showUpdate']);
+Route::get('/list/catering/product/delete/{id}', [ProdukCateringController::class, 'delete']);
 
 Route::get('/list/photography', [FotograferController::class, 'adminList']);
+Route::get('/list/photography/product', [ProdukFotograferController::class, 'adminList']);
 Route::get('/list/photography/create', [FotograferController::class, 'showCreate']);
 Route::post('/list/photography/insert', [FotograferController::class, 'insert']);
 Route::post('/list/photography/update', [FotograferController::class, 'update']);
 Route::get('/list/photography/edit/{id}', [FotograferController::class, 'showUpdate']);
 Route::get('/list/photography/delete/{id}', [FotograferController::class, 'delete']);
+Route::get('/list/photography/product/create', [ProdukFotograferController::class, 'showCreate']);
+Route::post('/list/photography/product/insert', [ProdukFotograferController::class, 'insert']);
+Route::post('/list/photography/product/update', [ProdukFotograferController::class, 'update']);
+Route::get('/list/photography/product/edit/{id}', [ProdukFotograferController::class, 'showUpdate']);
+Route::get('/list/photography/product/delete/{id}', [ProdukFotograferController::class, 'delete']);
 
 Route::get('/test', [VenueController::class, 'test'])->name('test');
 

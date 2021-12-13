@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProdukFotograferController extends Controller
 {
@@ -45,54 +46,96 @@ class ProdukFotograferController extends Controller
 
     public function adminList()
     {
-        $allFotografer = DB::table('penyedia_layanan')
-                    ->where('id_jenis_penyedia', 4)
-                    // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+        $allProdukFotografer = DB::table('produk_jasa_fotografer')
+                            ->join('penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan',
+                            'produk_jasa_fotografer.id_penyedia_layanan') 
+                            ->select(
+                                'produk_jasa_fotografer.*',
+                                'penyedia_layanan.nama_toko_jasa as vendor'
+                            )
                     ->get();
         $no = 1;
-        return view('admin.fotografer.list', compact('allFotografer', 'no'));
+        return view('admin.produk-fotografer.list', compact('allProdukFotografer', 'no'));
     }
 
-    public function create(Request $request)
+    public function insert(Request $request)
     {
         try {
 
-            DB::table('produk_jasa_fotografer')->insert([
+            $id = DB::table('produk_jasa_fotografer')->insertGetId([
                 'id_penyedia_layanan'=>$request->id_penyedia_layanan,
-                'nama_paket'=>$request->nama_paket,
+                'nama'=>$request->nama,
                 'deskripsi'=>$request->deskripsi,
                 'harga'=>$request->harga,
                 'diskon'=>$request->diskon,
-                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
+                'harga_setelah_diskon'=> (empty($diskon)) ? 0 : (1-(($request->diskon)/100))*$request->harga
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
+            DB::table('foto_produk_jasa_fotografer')->insert([
+                'id_produk_jasa_fotografer'=>$id,
+                'file'=>$request->foto
+            ]);
+
+            Alert::success('Sukses', 'Data berhasil ditambahkan');
+            return redirect('list/photography/product');
         }
         catch(\Exception $e)
         {
             Log::error($e->getMessage());
         }
+    }
+
+    public function showCreate()
+    {
+        $penyediaLayanan = DB::table('penyedia_layanan')
+                            ->where('id_jenis_penyedia', 4)
+                            // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                            ->get();
+
+        return view('admin.produk-fotografer.create', compact('penyediaLayanan'));
+    }
+
+    public function showUpdate($id)
+    {
+        $data = DB::table('produk_jasa_fotografer')
+                        ->join('penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan',
+                            'produk_jasa_fotografer.id_penyedia_layanan') 
+                        ->select(
+                                'produk_jasa_fotografer.*',
+                                'penyedia_layanan.nama_toko_jasa as vendor'
+                            )
+                ->where('produk_jasa_fotografer.id_produk_jasa_fotografer', $id)
+                ->first();
+
+        $penyediaLayanan = DB::table('penyedia_layanan')
+                ->where('id_jenis_penyedia', 4)
+                // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                ->get();
+
+        return view('admin.produk-fotografer.edit', compact('data', 'id', 'penyediaLayanan'));
     }
 
     public function update(Request $request)
     {
-        try {
+        // try {
 
             DB::table('produk_jasa_fotografer')->where('id_produk_jasa_fotografer', $request->id_produk_jasa_fotografer)
             ->update([
-                'nama_paket'=>$request->nama_paket,
+                'id_penyedia_layanan'=>$request->id_penyedia_layanan,
+                'nama'=>$request->nama,
                 'deskripsi'=>$request->deskripsi,
                 'harga'=>$request->harga,
                 'diskon'=>$request->diskon,
-                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
+                'harga_setelah_diskon'=> (empty($request->diskon)) ? 0 : (1-(($request->diskon)/100))*$request->harga
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
-        }
-        catch(\Exception $e)
-        {
-            Log::error($e->getMessage());
-        }
+            Alert::success('Sukses', 'Data berhasil diupdate');
+            return redirect('list/photography/product');
+        // }
+        // catch(\Exception $e)
+        // {
+        //     Log::error($e->getMessage());
+        // }
     }
 
     public function delete($id)
@@ -102,7 +145,9 @@ class ProdukFotograferController extends Controller
             DB::table('produk_jasa_fotografer')->where('id_produk_jasa_fotografer', $id)
             ->delete();
 
-            return redirect()->with('flashKey', 'flashValue');
+            
+            Alert::success('Sukses', 'Data berhasil dihapus');
+            return redirect('list/photography/product');
         }
         catch(\Exception $e)
         {

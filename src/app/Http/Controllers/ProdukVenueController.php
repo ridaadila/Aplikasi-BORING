@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Log;
 use App\Models\PenyediaLayanan;
 
 use DataTables;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProdukVenueController extends Controller
 {
@@ -33,11 +34,16 @@ class ProdukVenueController extends Controller
 
     function adminList()
     {
-        $allVenue = DB::table('penyedia_layanan')
-                    // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+        $allProdukVenue = DB::table('produk_tempat_akad_nikah')
+                            ->join('penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan',
+                            'produk_tempat_akad_nikah.id_penyedia_layanan') 
+                            ->select(
+                                'produk_tempat_akad_nikah.*',
+                                'penyedia_layanan.nama_toko_jasa as vendor'
+                            )
                     ->get();
         $no = 1;
-        return view('admin.venue.list', compact('allVenue', 'no'));
+        return view('admin.produk-venue.list', compact('allProdukVenue', 'no'));
     }
 
     public function index()
@@ -77,49 +83,83 @@ class ProdukVenueController extends Controller
 
     public function showCreate()
     {
-        return view('admin.venue.create');
+        $penyediaLayanan = DB::table('penyedia_layanan')
+                            ->where('id_jenis_penyedia', 1)
+                            // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                            ->get();
+
+        return view('admin.produk-venue.create', compact('penyediaLayanan'));
     }
 
-    public function create(Request $request)
+    public function insert(Request $request)
     {
         try {
 
-            DB::table('produk_tempat_akad_nikah')->insert([
+            $id = DB::table('produk_tempat_akad_nikah')->insertGetId([
                 'id_penyedia_layanan'=>$request->id_penyedia_layanan,
-                'nama_paket'=>$request->nama_paket,
+                'nama'=>$request->nama,
+                'lokasi'=>"",
                 'deskripsi'=>$request->deskripsi,
                 'harga'=>$request->harga,
                 'diskon'=>$request->diskon,
-                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
+                'harga_setelah_diskon'=> (empty($request->diskon)) ? 0 : (1-(($request->diskon)/100))*$request->harga,
+                'status_ketersediaan'=>1
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
+            DB::table('foto_produk_tempat_akad_nikah')->insert([
+                'id_produk_tempat_akad'=>$id,
+                'file'=>$request->foto
+            ]);
+
+            Alert::success('Sukses', 'Data berhasil ditambahkan');
+            return redirect('list/venue/product');
         }
         catch(\Exception $e)
         {
             Log::error($e->getMessage());
         }
+    }
+
+    public function showUpdate($id)
+    {
+        $data = DB::table('produk_tempat_akad_nikah')
+                        ->join('penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan',
+                            'produk_tempat_akad_nikah.id_penyedia_layanan') 
+                        ->select(
+                                'produk_tempat_akad_nikah.*',
+                                'penyedia_layanan.nama_toko_jasa as vendor'
+                            )
+                ->where('produk_tempat_akad_nikah.id_produk_tempat_akad', $id)
+                ->first();
+
+        $penyediaLayanan = DB::table('penyedia_layanan')
+                ->where('id_jenis_penyedia', 1)
+                // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                ->get();
+
+        return view('admin.produk-venue.edit', compact('data', 'id', 'penyediaLayanan'));
     }
 
     public function update(Request $request)
     {
-        try {
+        // try {
 
             DB::table('produk_tempat_akad_nikah')->where('id_produk_tempat_akad', $request->id_produk_tempat_akad)
             ->update([
-                'nama_paket'=>$request->nama_paket,
+                'nama'=>$request->nama,
                 'deskripsi'=>$request->deskripsi,
                 'harga'=>$request->harga,
                 'diskon'=>$request->diskon,
-                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
+                'harga_setelah_diskon'=> (empty($request->diskon)) ? 0 : (1-(($request->diskon)/100))*$request->harga
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
-        }
-        catch(\Exception $e)
-        {
-            Log::error($e->getMessage());
-        }
+            Alert::success('Sukses', 'Data berhasil diupdate');
+            return redirect('list/venue/product');
+        // }
+        // catch(\Exception $e)
+        // {
+        //     Log::error($e->getMessage());
+        // }
     }
 
     public function delete($id)
@@ -129,7 +169,8 @@ class ProdukVenueController extends Controller
             DB::table('produk_tempat_akad_nikah')->where('id_produk_tempat_akad', $id)
             ->delete();
 
-            return redirect()->with('flashKey', 'flashValue');
+            Alert::success('Sukses', 'Data berhasil dihapus');
+            return redirect('list/venue/product');
         }
         catch(\Exception $e)
         {
