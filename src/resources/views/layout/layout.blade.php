@@ -147,8 +147,8 @@
                         </div>
                     </div>
                     <ul class="shopping__btn">
-                        <li><a href="{{ route('login') }}">Become a Vendor</a></li>
-                        <li><a href="{{ route('login') }}">Become a Customer</a></li>
+                        <li><a href="{{ url('login') }}">Become a Vendor</a></li>
+                        <li><a href="{{ url('login') }}">Become a Customer</a></li>
                         {{-- Ada kalo udah login --}}
                         <li class="shp__checkout"><a href="{{ route('profile') }}">Profile</a></li>
                     </ul>

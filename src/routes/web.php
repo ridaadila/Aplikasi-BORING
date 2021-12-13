@@ -18,6 +18,7 @@ use App\Http\Controllers\CateringController;
 |
 */
 Route::get('/', [BerandaController::class, 'index']);
+Route::get('/login', [AuthController::class, 'login']);
 Route::get('/venue', [VenueController::class, 'index']);
 Route::get('/decoration', [DekorasiController::class, 'index']);
 Route::get('/photography', [FotograferController::class, 'index']);
@@ -27,9 +28,9 @@ Route::get('/catering', [CateringController::class, 'index']);
 //     return view('boring/home');
 // })->name('home');
 
-Route::get('/login', function () {
-    return view('boring/login-register');
-})->name('login');
+// Route::get('/login', function () {
+//     return view('boring/login-register');
+// })->name('login');
 
 Route::get('/contact', function () {
     return view('boring/contact');

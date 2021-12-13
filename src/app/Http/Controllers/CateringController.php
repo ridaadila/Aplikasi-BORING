@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CateringController extends Controller
 {
@@ -32,11 +33,13 @@ class CateringController extends Controller
                 'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
+            Alert::success('Sukses', 'Data berhasil ditambahkan');
+            return redirect();
         }
         catch(\Exception $e)
         {
             Log::error($e->getMessage());
+            Alert::error('Error', 'Terjadi kesalahan saat menambahkan data');
         }
     }
 
