@@ -92,6 +92,7 @@ class VenueController extends Controller
                 'id_jenis_penyedia'=>1,
                 'alamat'=>$request->alamat,
                 'deskripsi_toko_jasa'=>$request->deskripsi,
+                'jenis_kategori'=>$request->jenis_kategori,
                 'nomor_telepon'=>$request->nomer_telepon
             ]);
 
@@ -130,6 +131,7 @@ class VenueController extends Controller
                 'nama_toko_jasa'=>$request->nama_toko_jasa,
                 'alamat'=>$request->alamat,
                 'deskripsi_toko_jasa'=>$request->deskripsi,
+                'jenis_kategori'=>$request->jenis_kategori,
                 'nomor_telepon'=>$request->nomer_telepon
             ]);
 

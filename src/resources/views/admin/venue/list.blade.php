@@ -17,6 +17,7 @@
                                 <th class="text-center" scope="col">Nama</th>
                                 <th class="text-center" scope="col">Alamat</th>
                                 <th class="text-center" scope="col">Nomor Telepon</th>
+                                <th class="text-center" scope="col">Jenis Tempat</th>
                                 <th class="text-center" scope="col">Deskripsi</th>
                                 {{-- <th class="text-center" scope="col">Foto</th> --}}
                                 <th class="text-center" scope="col">Aksi</th>
@@ -27,6 +28,7 @@
                                         <td>{{ $data->NAMA_TOKO_JASA }}</td>
                                         <td>{{ $data->ALAMAT }}</td>
                                         <td>{{ $data->NOMOR_TELEPON }}</td>
+                                        <td>{{ str_replace("_", " ", $data->JENIS_KATEGORI) }}</td>
                                         <td>{{ $data->DESKRIPSI_TOKO_JASA }}</td>
                                         {{-- <td>
                                             <img src='data:image/jpeg;base64, {{$imgData}}' width="100px" height="100px" alt="product images">

@@ -35,6 +35,14 @@
                             <label for="jumlah">Nomer Telepon</label>
                             <input type="number" class="form-control" id="nomer_telepon" name="nomer_telepon" value="{{$data->NOMOR_TELEPON}}" />
                         </div>
+
+                        <div class="form-group">
+                            <label for="jumlah">Kategori</label>
+                            <select name="jenis_kategori" id="jenis_kategori" class="form-control">
+                                <option value="photobooth" @if($data->JENIS_KATEGORI == "photobooth") selected @endif>Photobooth</option>
+                                <option value="foto_video" @if($data->JENIS_KATEGORI == "foto_video") selected @endif>Foto & Video</option>
+                            </select>
+                        </div>
     
                         <div class="form-group">
                             <label for="harga">Deskripsi</label>

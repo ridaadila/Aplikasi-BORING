@@ -36,6 +36,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="jumlah">Kategori</label>
+                        <select name="jenis_kategori" id="jenis_kategori" class="form-control">
+                            <option value="masjid">Masjid</option>
+                            <option value="gereja">Gereja</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="convention_hall">Convention Hall</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="harga">Deskripsi</label>
                         <textarea style="resize: none;" class="form-control" name="deskripsi" id="deskripsi">{{old('deskripsi')}}</textarea>
                     </div>

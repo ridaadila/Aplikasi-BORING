@@ -37,6 +37,16 @@
                     </div>
 
                     <div class="form-group">
+                        <label for="jumlah">Kategori</label>
+                        <select name="jenis_kategori" id="jenis_kategori" class="form-control">
+                            <option value="masjid" @if($data->JENIS_KATEGORI == "masjid") selected @endif>Masjid</option>
+                            <option value="gereja" @if($data->JENIS_KATEGORI == "gereja") selected @endif>Gereja</option>
+                            <option value="hotel" @if($data->JENIS_KATEGORI == "hotel") selected @endif>Hotel</option>
+                            <option value="convention_hall" @if($data->JENIS_KATEGORI == "convention_hall") selected @endif>Convention Hall</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
                         <label for="harga">Deskripsi</label>
                         <textarea style="resize: none;" class="form-control" name="deskripsi" id="deskripsi">{{$data->DESKRIPSI_TOKO_JASA}}</textarea>
                     </div>

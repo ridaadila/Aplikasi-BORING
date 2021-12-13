@@ -60,7 +60,7 @@
                                             <?php $count = 1; ?> 
                                             @foreach ($value as $k=>$v)
                                                 <div class="category-part-{{$count}} category-common mb--30">
-                                                    <h4 class="categories-subtitle"> {{$k}} </h4>
+                                                    <h4 class="categories-subtitle"> {{ ($k=="foto_video") ? "Foto video" : $k}} </h4>
                                                     <ul>
                                                         @foreach ($v as $item)
                                                             <li><a href="#"> {{$item['nama_toko_jasa']}} </a></li>
@@ -1176,7 +1176,7 @@
                     <div class="product-categories-menu">
                         <ul>
                             @foreach ($array['Fotografer'] as $key=>$val)
-                                <li><a href="#">{{$key}}</a></li>
+                                <li><a href="#">{{ str_replace("_", " ", $key) }}</a></li>
                             @endforeach
                         </ul>
                     </div>

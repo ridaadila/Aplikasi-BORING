@@ -56,7 +56,7 @@ class FotograferController extends Controller
 
     public function showCreate()
     {
-        return view('admin.catering.create');
+        return view('admin.fotografer.create');
     }
 
     public function insert(Request $request)
@@ -69,6 +69,7 @@ class FotograferController extends Controller
                 'id_jenis_penyedia'=>4,
                 'alamat'=>$request->alamat,
                 'deskripsi_toko_jasa'=>$request->deskripsi,
+                'jenis_kategori'=>$request->jenis_kategori,
                 'nomor_telepon'=>$request->nomer_telepon
             ]);
 
@@ -107,6 +108,7 @@ class FotograferController extends Controller
                 'nama_toko_jasa'=>$request->nama_toko_jasa,
                 'alamat'=>$request->alamat,
                 'deskripsi_toko_jasa'=>$request->deskripsi,
+                'jenis_kategori'=>$request->jenis_kategori,
                 'nomor_telepon'=>$request->nomer_telepon
             ]);
 
