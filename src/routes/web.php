@@ -79,3 +79,7 @@ Route::get('/checkout', function () {
 Route::get('/admin', function () {
     return view('layout/admin');
 })->name('admin');
+
+
+Route::get('/list/venue/data', [VenueController::class, 'listVenue'])->name('venue.data');
+Route::get('/list/venue', [VenueController::class, 'viewListVenue'])->name('venue.list');

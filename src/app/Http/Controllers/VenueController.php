@@ -6,9 +6,26 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 
+use App\Models\PenyediaLayanan;
+
+use DataTables;
+
 class VenueController extends Controller
 {
-   
+
+    public function listVenue()
+    {
+        $data = PenyediaLayanan::listVenue()->newQuery();
+        // $test = DataTables::eloquent($data)->toJson();
+        // dd($test);
+        return DataTables::eloquent($data)->toJson();
+    }
+
+    function viewListVenue()
+    {
+        return view('venue.table');
+    }
+
     public function index()
     {
         $jenisPenyedia = DB::table('penyedia_layanan')
