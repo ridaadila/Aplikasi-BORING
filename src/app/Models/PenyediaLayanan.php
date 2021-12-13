@@ -46,4 +46,17 @@ class PenyediaLayanan extends Model
     {
         return $this->hasMany(FotoToko::class, 'id_penyedia_layanan');
     }
+
+    public static function listVenue(){
+        return PenyediaLayanan::join('jenis_penyedia_layanan', 'penyedia_layanan.id_jenis_penyedia', '=', 'jenis_penyedia_layanan.id_jenis_penyedia')
+        ->select([
+            'penyedia_layanan.id_penyedia_layanan as id_penyedia_layanan',
+            'jenis_penyedia_layanan.nama as jenis_penyedia_layanan',
+            'penyedia_layanan.nama_toko_jasa as nama_toko_jasa',
+            'penyedia_layanan.alamat as alamat',
+            'penyedia_layanan.nomor_telepon as nomor_telepon',
+            'penyedia_layanan.deskripsi_toko_jasa as deskripsi_toko_jasa',
+            'penyedia_layanan.jenis_kategori as jenis_kategori',
+        ]);
+    }
 }

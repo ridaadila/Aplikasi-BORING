@@ -49,22 +49,22 @@
                     <ul class="nav side-menu">
                     <li><a><i class="fa fa-building"></i> Venue <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('home') }}">Daftar Venue</a></li>
+                        <li><a href="{{ route('login') }}">Daftar Venue</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-leaf"></i> Decoration <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('home') }}">Daftar Decoration</a></li>
+                        <li><a href="{{ route('login') }}">Daftar Decoration</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-camera"></i> Photography <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('home') }}">Daftar Photography</a></li>
+                        <li><a href="{{ route('login') }}">Daftar Photography</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-cutlery"></i> Catering <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('home') }}">Daftar Catering</a></li>
+                        <li><a href="{{ route('login') }}">Daftar Catering</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -107,6 +107,6 @@
     </div>
 
     </div>
-    <!-- @yield('scripts') -->
+    @yield('scripts')
 </body>
 </html>
