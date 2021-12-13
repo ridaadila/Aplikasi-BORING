@@ -13,6 +13,11 @@ use DataTables;
 class VenueController extends Controller
 {
 
+    public function test()
+    {
+        return view('admin.venue.edit');
+    }
+
     public function listVenue()
     {
         $data = PenyediaLayanan::listVenue()->newQuery();
@@ -24,6 +29,41 @@ class VenueController extends Controller
     function viewListVenue()
     {
         return view('venue.table');
+    }
+
+    function adminList()
+    {
+        $jenisPenyedia = DB::table('penyedia_layanan')
+                        ->where('id_jenis_penyedia', 1)
+                        ->select('jenis_kategori')
+                        ->distinct()->get();
+
+        $allVenue = DB::table('penyedia_layanan')
+                        ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                        ->where('id_jenis_penyedia', 1)
+                                ->get();
+        $array = [];
+        foreach($jenisPenyedia as $jenis)
+        {
+            $array[$jenis->jenis_kategori] = [];
+        }
+
+        foreach($allVenue as $venue) {
+            $data = [
+                "id_penyedia_layanan"=>$venue->ID_PENYEDIA_LAYANAN,
+                "nama_toko_jasa"=>$venue->NAMA_TOKO_JASA,
+                "alamat"=>$venue->ALAMAT,
+                "nomor_telepon"=>$venue->NOMOR_TELEPON,
+                "deskripsi"=>$venue->DESKRIPSI_TOKO_JASA,
+                "foto"=>$venue->FILE
+            ];
+
+            array_push($array[$venue->JENIS_KATEGORI], $data);
+        }
+
+        // dd($array);
+
+        return view('admin.venue.list', compact('array', 'jenisPenyedia'));
     }
 
     public function index()

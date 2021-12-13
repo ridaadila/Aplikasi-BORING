@@ -80,6 +80,13 @@ Route::get('/admin', function () {
     return view('layout/admin');
 })->name('admin');
 
+Route::get('/list/venue', [VenueController::class, 'adminList'])->name('venue.list');
+Route::get('/test', [VenueController::class, 'test'])->name('test');
 
-Route::get('/list/venue/data', [VenueController::class, 'listVenue'])->name('venue.data');
-Route::get('/list/venue', [VenueController::class, 'viewListVenue'])->name('venue.list');
+// Route::get('/test', function () {
+//     return view('admin/venue/create');
+// })->name('test');
+
+
+// Route::get('/list/venue/data', [VenueController::class, 'listVenue'])->name('venue.data');
+// Route::get('/list/venue', [VenueController::class, 'viewListVenue'])->name('venue.list');
