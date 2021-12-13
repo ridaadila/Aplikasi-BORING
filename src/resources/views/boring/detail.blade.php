@@ -59,42 +59,29 @@
 <div class="portfolio-related-post pb--100 bg__white" id="order">
     <div class="container">
         <div class="section__title text-center mb--50">
-            <h2 class="title__line">PENAWARAN PRODUK / PAKET</h2>
+            <h2 class="title__line">Penawaran produk atau paket</h2>
         </div>
         <div class="tab-content portfolio-carousel-style jump">
             <div class="related-portfolio">
                 <div class="row">
                     <div class="portfolio-slider-active owl-carousel">
                         @foreach ($produk as $item)
-                        <div class="col-md-4 single__pro col-lg-4 cat--1 col-sm-4 col-xs-12">
-                            <div class="product">
-                                <div class="product__inner">
-                                    <div class="pro__thumb">
-                                        <a href="#">
-                                            <?php $imgData = base64_encode($toko->file); ?>
-                                            <img src='data:image/jpeg;base64, {{$imgData}}' width="270px" height="270px" alt="product images">
-                                        </a>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
+                            <div class="single-portfolio mb--30">
+                                <div class="portfolio-img-title">
+                                    <a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#">
+                                        <img src="images/portfolio/equal/1.jpg" alt="" />
+                                    </a>
+                                    <div class="portfolio-title hover-title">
+                                        {{-- <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li> --}}
+                                        <h3><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#">TITLE GOES HERE</a></h3>
+                                        <span>{{$item->nama_paket}}</span>
                                     </div>
-                                    <div class="product__hover__info">
-                                        <ul class="product__action">
-                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                            <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                            <li><a title="Wishlist" href="wishlist.html"><span class="ti-heart"></span></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product__details">
-                                    <h2><a href="product-details.html">{{$item->nama_paket}}</a></h2>
-                                    <ul class="product__price">
-                                        <li class="old__price">{{$item->harga}}</li>
-                                        @if (!empty($item->diskon))
-                                            <li class="new__price">{{$item->harga_setelah_diskon}}</li>
-                                        @endif
-                                    </ul>
-                                </div>
-                            </div>
+                                </div>					
+                            </div>				
                         </div>
                         @endforeach
+                        
                     </div>
                 </div>
             </div>

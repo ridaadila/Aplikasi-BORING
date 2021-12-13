@@ -159,6 +159,8 @@ class BerandaController extends Controller
                         ->get();
         }
 
+        // dd($produk);
+
         return view('boring.detail', compact('produk', 'toko'));
         
     }
