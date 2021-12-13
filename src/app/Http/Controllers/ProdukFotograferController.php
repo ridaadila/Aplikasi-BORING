@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
-use RealRashid\SweetAlert\Facades\Alert;
 
-class FotograferController extends Controller
+class ProdukFotograferController extends Controller
 {
     public function index()
     {
@@ -54,31 +53,20 @@ class FotograferController extends Controller
         return view('admin.fotografer.list', compact('allFotografer', 'no'));
     }
 
-    public function showCreate()
-    {
-        return view('admin.catering.create');
-    }
-
-    public function insert(Request $request)
+    public function create(Request $request)
     {
         try {
 
-            $id = DB::table('penyedia_layanan')->insertGetId([
-                'nama_toko_jasa'=>$request->nama_toko_jasa,
-                'id_user'=>1,
-                'id_jenis_penyedia'=>4,
-                'alamat'=>$request->alamat,
-                'deskripsi_toko_jasa'=>$request->deskripsi,
-                'nomor_telepon'=>$request->nomer_telepon
+            DB::table('produk_jasa_fotografer')->insert([
+                'id_penyedia_layanan'=>$request->id_penyedia_layanan,
+                'nama_paket'=>$request->nama_paket,
+                'deskripsi'=>$request->deskripsi,
+                'harga'=>$request->harga,
+                'diskon'=>$request->diskon,
+                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
             ]);
 
-            DB::table('foto_toko')->insert([
-                'id_penyedia_layanan'=>$id,
-                'file'=>$request->foto
-            ]);
-
-            Alert::success('Sukses', 'Data berhasil ditambahkan');
-            return redirect('list/photography');
+            return redirect()->with('flashKey', 'flashValue');
         }
         catch(\Exception $e)
         {
@@ -86,53 +74,35 @@ class FotograferController extends Controller
         }
     }
 
-    public function showUpdate($id)
-    {
-        $data = DB::table('penyedia_layanan')
-                ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
-                ->where('penyedia_layanan.id_penyedia_layanan', $id)
-                ->first();
-
-        return view('admin.fotografer.edit', compact('data', 'id'));
-    }
-
-
     public function update(Request $request)
     {
-        // try {
+        try {
 
-            DB::table('penyedia_layanan')->where('id_penyedia_layanan', 
-                                            $request->id_penyedia_layanan)
+            DB::table('produk_jasa_fotografer')->where('id_produk_jasa_fotografer', $request->id_produk_jasa_fotografer)
             ->update([
-                'nama_toko_jasa'=>$request->nama_toko_jasa,
-                'alamat'=>$request->alamat,
-                'deskripsi_toko_jasa'=>$request->deskripsi,
-                'nomor_telepon'=>$request->nomer_telepon
+                'nama_paket'=>$request->nama_paket,
+                'deskripsi'=>$request->deskripsi,
+                'harga'=>$request->harga,
+                'diskon'=>$request->diskon,
+                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
             ]);
 
-            //  DB::table('foto_toko')->where('id_penyedia_layanan', $request->id_penyedia_layanan)->
-            //  update([
-            //     'file'=>$request->foto
-            // ]);
-
-            Alert::success('Sukses', 'Data berhasil diupdate');
-            return redirect('list/photography');
-        // }
-        // catch(\Exception $e)
-        // {
-        //     Log::error($e->getMessage());
-        // }
+            return redirect()->with('flashKey', 'flashValue');
+        }
+        catch(\Exception $e)
+        {
+            Log::error($e->getMessage());
+        }
     }
 
     public function delete($id)
     {
         try {
 
-            DB::table('penyedia_layanan')->where('id_penyedia_layanan', $id)
+            DB::table('produk_jasa_fotografer')->where('id_produk_jasa_fotografer', $id)
             ->delete();
 
-            Alert::success('Sukses', 'Data berhasil dihapus');
-            return redirect('list/photography');
+            return redirect()->with('flashKey', 'flashValue');
         }
         catch(\Exception $e)
         {

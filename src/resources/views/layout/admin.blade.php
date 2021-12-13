@@ -7,6 +7,7 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="https://unpkg.com/sweetalert2@7.18.0/dist/sweetalert2.all.js"></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -28,6 +29,7 @@
 
 </head>
 <body>
+    @include('sweetalert::alert')
     <div id="app">
 
     <body class="nav-md admin">
@@ -49,22 +51,22 @@
                     <ul class="nav side-menu">
                     <li><a><i class="fa fa-building"></i> Venue <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('login') }}">Daftar Venue</a></li>
+                        <li><a href="{{url('list/venue')}}">Daftar Venue</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-leaf"></i> Decoration <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('login') }}">Daftar Decoration</a></li>
+                        <li><a href="{{url('list/decoration')}}">Daftar Decoration</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-camera"></i> Photography <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('login') }}">Daftar Photography</a></li>
+                        <li><a href="{{url('list/photography')}}">Daftar Photography</a></li>
                         </ul>
                     </li>
                     <li><a><i class="fa fa-cutlery"></i> Catering <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
-                        <li><a href="{{ route('login') }}">Daftar Catering</a></li>
+                        <li><a href="{{url('list/catering')}}">Daftar Catering</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -89,7 +91,7 @@
                         <i class="fa fa-user admin"></i>Admin
                     </a>
                     <div style="margin: auto" class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item"  href="{{ route('login') }}"><i class="fa fa-sign-out pull-right"></i>Log Out</a>
+                        <a class="dropdown-item"  href="{{url('admin/list/venue')}}"><i class="fa fa-sign-out pull-right"></i>Log Out</a>
                     </div>
                     </li>
 

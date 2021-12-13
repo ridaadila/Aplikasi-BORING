@@ -18,19 +18,10 @@ use App\Http\Controllers\CateringController;
 |
 */
 Route::get('/', [BerandaController::class, 'index']);
-Route::get('/login', [AuthController::class, 'login']);
 Route::get('/venue', [VenueController::class, 'index']);
 Route::get('/decoration', [DekorasiController::class, 'index']);
 Route::get('/photography', [FotograferController::class, 'index']);
 Route::get('/catering', [CateringController::class, 'index']);
-
-// Route::get('/', function () {
-//     return view('boring/home');
-// })->name('home');
-
-// Route::get('/login', function () {
-//     return view('boring/login-register');
-// })->name('login');
 
 Route::get('/contact', function () {
     return view('boring/contact');
@@ -48,25 +39,6 @@ Route::get('/profile', function () {
     return view('boring/customer/profile');
 })->name('profile');
 
-
-// // Vendor
-// Route::get('/venue', function () {
-//     return view('boring/vendor/venue');
-// })->name('venue');
-
-// Route::get('/decoration', function () {
-//     return view('boring/vendor/decoration');
-// })->name('decor');
-
-// Route::get('/photography', function () {
-//     return view('boring/vendor/photography');
-// })->name('photo');
-
-// Route::get('/catering', function () {
-//     return view('boring/vendor/catering');
-// })->name('catering');
-
-
 // Transaksi
 Route::get('/cart', function () {
     return view('transaksi/cart');
@@ -82,6 +54,33 @@ Route::get('/admin', function () {
 })->name('admin');
 
 Route::get('/list/venue', [VenueController::class, 'adminList'])->name('venue.list');
+Route::get('/list/venue/create', [VenueController::class, 'showCreate']);
+Route::post('/list/venue/insert', [VenueController::class, 'insert']);
+Route::post('/list/venue/update', [VenueController::class, 'update']);
+Route::get('/list/venue/edit/{id}', [VenueController::class, 'showUpdate']);
+Route::get('/list/venue/delete/{id}', [VenueController::class, 'delete']);
+
+Route::get('/list/decoration', [DekorasiController::class, 'adminList']);
+Route::get('/list/decoration/create', [DekorasiController::class, 'showCreate']);
+Route::post('/list/decoration/insert', [DekorasiController::class, 'insert']);
+Route::post('/list/decoration/update', [DekorasiController::class, 'update']);
+Route::get('/list/decoration/edit/{id}', [DekorasiController::class, 'showUpdate']);
+Route::get('/list/decoration/delete/{id}', [DekorasiController::class, 'delete']);
+
+Route::get('/list/catering', [CateringController::class, 'adminList']);
+Route::get('/list/catering/create', [CateringController::class, 'showCreate']);
+Route::post('/list/catering/insert', [CateringController::class, 'insert']);
+Route::post('/list/catering/update', [CateringController::class, 'update']);
+Route::get('/list/catering/edit/{id}', [CateringController::class, 'showUpdate']);
+Route::get('/list/catering/delete/{id}', [CateringController::class, 'delete']);
+
+Route::get('/list/photography', [FotograferController::class, 'adminList']);
+Route::get('/list/photography/create', [FotograferController::class, 'showCreate']);
+Route::post('/list/photography/insert', [FotograferController::class, 'insert']);
+Route::post('/list/photography/update', [FotograferController::class, 'update']);
+Route::get('/list/photography/edit/{id}', [FotograferController::class, 'showUpdate']);
+Route::get('/list/photography/delete/{id}', [FotograferController::class, 'delete']);
+
 Route::get('/test', [VenueController::class, 'test'])->name('test');
 
 // Route::get('/test', function () {

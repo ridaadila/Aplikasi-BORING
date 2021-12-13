@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class DekorasiController extends Controller
 {
@@ -18,20 +19,41 @@ class DekorasiController extends Controller
         return view('boring.vendor.decoration', compact('allDekorasi'));
     }
 
-    public function create(Request $request)
+    function adminList()
+    {
+        $allDekorasi = DB::table('penyedia_layanan')
+                    ->where('id_jenis_penyedia', 3)
+                    // ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                    ->get();
+        $no = 1;
+        return view('admin.dekorasi.list', compact('allDekorasi', 'no'));
+    }
+
+    public function showCreate()
+    {
+        return view('admin.dekorasi.create');
+    }
+
+    public function insert(Request $request)
     {
         try {
 
-            DB::table('produk_jasa_dekorasi')->insert([
-                'id_penyedia_layanan'=>$request->id_penyedia_layanan,
-                'nama_paket'=>$request->nama_paket,
-                'deskripsi'=>$request->deskripsi,
-                'harga'=>$request->harga,
-                'diskon'=>$request->diskon,
-                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
+            $id = DB::table('penyedia_layanan')->insertGetId([
+                'nama_toko_jasa'=>$request->nama_toko_jasa,
+                'id_user'=>1,
+                'id_jenis_penyedia'=>3,
+                'alamat'=>$request->alamat,
+                'deskripsi_toko_jasa'=>$request->deskripsi,
+                'nomor_telepon'=>$request->nomer_telepon
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
+            DB::table('foto_toko')->insert([
+                'id_penyedia_layanan'=>$id,
+                'file'=>$request->foto
+            ]);
+
+            Alert::success('Sukses', 'Data berhasil ditambahkan');
+            return redirect('list/decoration');
         }
         catch(\Exception $e)
         {
@@ -39,35 +61,53 @@ class DekorasiController extends Controller
         }
     }
 
+    public function showUpdate($id)
+    {
+        $data = DB::table('penyedia_layanan')
+                ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
+                ->where('penyedia_layanan.id_penyedia_layanan', $id)
+                ->first();
+
+        return view('admin.dekorasi.edit', compact('data', 'id'));
+    }
+
+
     public function update(Request $request)
     {
-        try {
+        // try {
 
-            DB::table('produk_jasa_dekorasi')->where('id_jasa_dekorasi', $request->id_jasa_dekorasi)
+            DB::table('penyedia_layanan')->where('id_penyedia_layanan', 
+                                            $request->id_penyedia_layanan)
             ->update([
-                'nama_paket'=>$request->nama_paket,
-                'deskripsi'=>$request->deskripsi,
-                'harga'=>$request->harga,
-                'diskon'=>$request->diskon,
-                'harga_setelah_diskon'=> (empty($request->harga_setelah_diskon)) ? NULL : (1-(($request->diskon)/100))*$request->harga
+                'nama_toko_jasa'=>$request->nama_toko_jasa,
+                'alamat'=>$request->alamat,
+                'deskripsi_toko_jasa'=>$request->deskripsi,
+                'nomor_telepon'=>$request->nomer_telepon
             ]);
 
-            return redirect()->with('flashKey', 'flashValue');
-        }
-        catch(\Exception $e)
-        {
-            Log::error($e->getMessage());
-        }
+            //  DB::table('foto_toko')->where('id_penyedia_layanan', $request->id_penyedia_layanan)->
+            //  update([
+            //     'file'=>$request->foto
+            // ]);
+
+            Alert::success('Sukses', 'Data berhasil diupdate');
+            return redirect('list/decoration');
+        // }
+        // catch(\Exception $e)
+        // {
+        //     Log::error($e->getMessage());
+        // }
     }
 
     public function delete($id)
     {
         try {
 
-            DB::table('produk_jasa_dekorasi')->where('id_jasa_dekorasi', $id)
+            DB::table('penyedia_layanan')->where('id_penyedia_layanan', $id)
             ->delete();
 
-            return redirect()->with('flashKey', 'flashValue');
+            Alert::success('Sukses', 'Data berhasil dihapus');
+            return redirect('list/decoration');
         }
         catch(\Exception $e)
         {

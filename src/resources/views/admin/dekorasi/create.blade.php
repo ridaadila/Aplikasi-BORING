@@ -18,38 +18,38 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div> -->
-                <form method="post" action=">" enctype="multipart/form-data">
-
-                    <div class="form-group">
-                        <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama_paket" name="nama_paket" value="">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="nama">Deskripsi</label>
-                        <textarea style="resize: none;" class="form-control" name="deskripsi" id="deskripsi"></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="jumlah">Harga</label>
-                        <input type="text" class="form-control" id="harga" name="harga" value="" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="jumlah">Diskon</label>
-                        <input type="text" class="form-control" id="diskon" name="diskon" value="" />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="jumlah">Harga Setelah Diskon</label>
-                        <input type="text" class="form-control" id="harga_setelah_diskon" name="harga_setelah_diskon" value="" />
-                    </div>
-
-                    <div class="form-group">
-                        <input type="submit" value="Simpan" class="btn btn-block" style="color:white; background-color: #ea9999;" />
-                    </div>
-
-                </form>
+                    <form action="{{url('list/decoration/insert')}}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                            <div class="form-group">
+                                <label for="nama">Nama</label>
+                                <input type="text" class="form-control" id="nama_toko_jasa" name="nama_toko_jasa" value="{{old('nama_toko_jasa')}}">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="nama">Alamat</label>
+                                <input type="text" class="form-control" id="alamat" name="alamat" value="{{old('alamat')}}">
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="jumlah">Nomer Telepon</label>
+                                <input type="number" class="form-control" id="nomer_telepon" name="nomer_telepon" value="{{old('nomor_telepon')}}" />
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="harga">Deskripsi</label>
+                                <textarea style="resize: none;" class="form-control" name="deskripsi" id="deskripsi">{{old('deskripsi')}}</textarea>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="foto" class="form-label">Foto</label>
+                                <input type="file" class="form-control" id="foto" name="foto" value="{{old('foto')}}">
+                            </div>
+        
+                            <div class="form-group">
+                                <input type="submit" value="Simpan" class="btn btn-block" style="color:white; background-color: #ea9999;" />
+                            </div>
+        
+                        </form>
             </div>
         </div>
     </div>

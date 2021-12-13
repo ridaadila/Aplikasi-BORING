@@ -10,7 +10,7 @@
                     <div class="bradcaump__inner text-center">
                         <h2 class="bradcaump-title">Profile</h2>
                         <nav class="bradcaump-inner">
-                          <a class="breadcrumb-item" href="{{ route('home') }}">Home</a>
+                          <a class="breadcrumb-item" href="{{ url('/') }}">Home</a>
                           <span class="brd-separetor">/</span>
                           <span class="breadcrumb-item active">Profile</span>
                         </nav>

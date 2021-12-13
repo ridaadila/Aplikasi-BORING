@@ -67,6 +67,7 @@ class BerandaController extends Controller
         $dataDekorasi = DB::table('penyedia_layanan')
                         ->join('foto_toko', 'foto_toko.id_penyedia_layanan', 'penyedia_layanan.id_penyedia_layanan')
                         ->where('id_jenis_penyedia', 3)->get();
+        // dd($array);
 
         return view('boring.home', compact('array', 'dataVenue', 'dataDekorasi', 'dataFotografer', 'dataCatering'));
     }

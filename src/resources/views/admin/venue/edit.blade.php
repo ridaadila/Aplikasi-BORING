@@ -18,32 +18,33 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div> -->
-                <form method="post" action=">" enctype="multipart/form-data">
-
+                <form method="POST" action="{{url('list/venue/update')}}" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="id_penyedia_layanan" value="{{$id}}">
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama_toko_jasa" name="nama_toko_jasa" value="">
+                        <input type="text" class="form-control" id="nama_toko_jasa" name="nama_toko_jasa" value="{{$data->NAMA_TOKO_JASA}}">
                     </div>
 
                     <div class="form-group">
                         <label for="nama">Alamat</label>
-                        <input type="text" class="form-control" id="alamat" name="alamat" value="">
+                        <input type="text" class="form-control" id="alamat" name="alamat" value="{{$data->ALAMAT}}">
                     </div>
 
                     <div class="form-group">
                         <label for="jumlah">Nomer Telepon</label>
-                        <input type="number" class="form-control" id="nomer_telepon" name="nomer_telepon" value="" />
+                        <input type="number" class="form-control" id="nomer_telepon" name="nomer_telepon" value="{{$data->NOMOR_TELEPON}}" />
                     </div>
 
                     <div class="form-group">
                         <label for="harga">Deskripsi</label>
-                        <textarea style="resize: none;" class="form-control" name="deskripsi" id="deskripsi"></textarea>
+                        <textarea style="resize: none;" class="form-control" name="deskripsi" id="deskripsi">{{$data->DESKRIPSI_TOKO_JASA}}</textarea>
                     </div>
 
-                    <div class="form-group">
+                    {{-- <div class="form-group">
                         <label for="foto" class="form-label">Foto</label>
-                        <input type="file" class="form-control" id="foto" name="foto" value="">
-                    </div>
+                        <input type="file" class="form-control" id="foto" name="foto" value="{{$imgData}}">
+                    </div> --}}
 
                     <div class="form-group">
                         <input type="submit" value="Update" class="btn btn-block" style="color:white; background-color: #ea9999;" />
