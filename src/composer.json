@@ -11,10 +11,7 @@
         "laravel/framework": "^8.65",
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
-<<<<<<< HEAD
         "realrashid/sweet-alert": "^4.1",
-=======
->>>>>>> 9b31efb764f0f4f4112515e5ddc945b16c0cd44f
         "yajra/laravel-datatables-oracle": "^9.18"
     },
     "require-dev": {

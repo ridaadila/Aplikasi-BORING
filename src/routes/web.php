@@ -6,6 +6,7 @@ use App\Http\Controllers\VenueController;
 use App\Http\Controllers\DekorasiController;
 use App\Http\Controllers\FotograferController;
 use App\Http\Controllers\CateringController;
+use App\Http\Controllers\CustomAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +18,30 @@ use App\Http\Controllers\CateringController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', [BerandaController::class, 'index']);
+
+Route::get('/', [BerandaController::class, 'index'])->name('home');
+Route::get('/login', [AuthController::class, 'login']);
 Route::get('/venue', [VenueController::class, 'index']);
 Route::get('/decoration', [DekorasiController::class, 'index']);
 Route::get('/photography', [FotograferController::class, 'index']);
 Route::get('/catering', [CateringController::class, 'index']);
+
+/*
+start kana
+*/
+Route::get('/dashboard', [CustomAuthController::class, 'dashboard']);
+Route::get('/login', [CustomAuthController::class, 'login'])->name('login');
+Route::post('/custom-login', [CustomAuthController::class, 'customLogin'])->name('login.custom');
+Route::get('/registration', [CustomAuthController::class, 'registration'])->name('register-user');
+Route::post('/custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom');
+Route::get('/signout', [CustomAuthController::class, 'signOut'])->name('signout');
+/*
+end kana
+*/
+// ini punya yang awal
+// Route::get('/login', function () {
+//     return view('boring/login-register');
+// })->name('login');
 
 Route::get('/contact', function () {
     return view('boring/contact');
