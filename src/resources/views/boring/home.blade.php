@@ -110,7 +110,7 @@
                     <div class="product-categories-menu">
                         <ul>
                             @foreach ($array['Venue'] as $key=>$val)
-                                <li><a href="#">{{$key}}</a></li>
+                                <li><a href="">{{$key}}</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -174,7 +174,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="product__details">
-                                                    <h2><a href="product-details.html">{{$itemVenue->NAMA_TOKO_JASA}}</a></h2>
+                                                    <h2><a href="{{url('detail/' . $itemVenue->ID_PENYEDIA_LAYANAN)}}">{{$itemVenue->NAMA_TOKO_JASA}}</a></h2>
                                                     <ul class="product__price">
                                                         <li class="new__price">{{$itemVenue->ALAMAT}} - {{$itemVenue->NOMOR_TELEPON}}</li>
                                                         {{-- <li class="new__price">Rp399.000</li> --}}
@@ -671,7 +671,7 @@
                                                 </div>
                                             </div>
                                             <div class="product__details">
-                                                <h2><a href="product-details.html">{{ $itemDekorasi->NAMA_TOKO_JASA }}</a></h2>
+                                                <h2><a href="{{url('detail/' . $itemDekorasi->ID_PENYEDIA_LAYANAN)}}">{{ $itemDekorasi->NAMA_TOKO_JASA }}</a></h2>
                                                 <ul class="product__price">
                                                     <li class="new__price">{{ $itemDekorasi->ALAMAT }} - {{ $itemDekorasi->NOMOR_TELEPON}}</li>
                                                 </ul>
@@ -1176,7 +1176,7 @@
                     <div class="product-categories-menu">
                         <ul>
                             @foreach ($array['Fotografer'] as $key=>$val)
-                                <li><a href="#">{{ str_replace("_", " ", $key) }}</a></li>
+                                <li><a href="">{{ str_replace("_", " ", $key) }}</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -1243,7 +1243,7 @@
                                                 </div>
                                             </div>
                                             <div class="product__details">
-                                                <h2><a href="product-details.html">{{$itemFotografer->NAMA_TOKO_JASA}}</a></h2>
+                                                <h2><a href="{{url('detail/' . $itemFotografer->ID_PENYEDIA_LAYANAN)}}">{{$itemFotografer->NAMA_TOKO_JASA}}</a></h2>
                                                 <ul class="product__price">
                                                     <li class="new__price">{{$itemFotografer->ALAMAT}} - {{$itemFotografer->NOMOR_TELEPON}}</li>
                                                 </ul>
@@ -1590,7 +1590,7 @@
                                                 </div>
                                             </div>
                                             <div class="product__details">
-                                                <h2><a href="product-details.html">{{$itemCatering->NAMA_TOKO_JASA}}</a></h2>
+                                                <h2><a href="{{url('detail/' . $itemCatering->ID_PENYEDIA_LAYANAN)}}">{{$itemCatering->NAMA_TOKO_JASA}}</a></h2>
                                                 <ul class="product__price">
                                                     <li class="new__price">{{$itemCatering->ALAMAT}} - {{$itemCatering->NOMOR_TELEPON}}</li>
                                                 </ul>

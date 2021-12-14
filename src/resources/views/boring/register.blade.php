@@ -21,9 +21,9 @@
                         <div class="htc__login__register__wrap">
                             <div id="login" role="tabpanel" class="single__tabs__panel tab-pane fade in active">
                                 <form class="login" method="post" action="{{ route('register.custom') }}">
-                                    <input type="text" placeholder="Nama*" id="nama" name="nama" value="">
-                                    <input type="text" placeholder="Username*" id="username" name="username" value="">
-                                    <input type="email" placeholder="Email*" id="email" name="email" value="">
+                                    <input type="text" placeholder="Nama*" id="nama" name="nama">
+                                    <input type="text" placeholder="Username*" id="username" name="username">
+                                    <input type="email" placeholder="Email*" id="email" name="email">
                                     <input type="password" placeholder="Password*" id="password" name="password">
 
                                     <div class="htc__login__btn">

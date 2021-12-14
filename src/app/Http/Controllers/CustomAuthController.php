@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CustomAuthController extends Controller
 {
@@ -52,7 +53,7 @@ class CustomAuthController extends Controller
 
         $data = $request->all();
         $check = $this->create($data);
-
+        
         return redirect("dashboard")->withSuccess('You have signed-in');
     }
 
@@ -60,7 +61,7 @@ class CustomAuthController extends Controller
     public function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'name' => $data['nama'],
             'username' => $data['username'],
             'email' => $data['email'],
             'password' => Hash::make($data['password'])

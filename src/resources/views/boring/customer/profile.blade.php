@@ -44,7 +44,7 @@
                     <h2>Profile</h2>
                     <div class="portfolio-info">
                         <ul>
-                            <li><span>Name:</span>Tayeb rayed</li>
+                            <li><span>Name:</span></li>
                             <li><span>Email:</span>tayeb@gmail.com</li>
                             <li><span>Username:</span>tayebs</li>
                             <li><span>Password:</span>*******</li>
