@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Place favicon.ico in the root directory -->
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/favicon.ico')}}">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
 
@@ -49,7 +49,7 @@
                         <div class="col-md-2 col-lg-2 col-sm-3 col-xs-3">
                             <div class="logo">
                                 <a href="{{url('/')}}">
-                                    <img src="images/logo/logo.png" alt="logo">
+                                    <img src="{{asset('images/logo/logo.png')}}" alt="logo">
                                 </a>
                             </div>
                         </div>
@@ -342,6 +342,8 @@
         </footer>
         <!-- End Footer Area -->
     </div>
+    {{-- @include('layout.quick-view') --}}
+
     <!-- Body main wrapper end -->
 
     <!-- Placed js at the end of the document so the pages load faster -->

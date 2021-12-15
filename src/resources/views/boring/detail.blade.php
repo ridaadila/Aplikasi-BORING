@@ -8,11 +8,11 @@
             <div class="row">
                 <div class="col-xs-12">
                     <div class="bradcaump__inner text-center">
-                        <h2 class="bradcaump-title">Profile</h2>
+                        <h2 class="bradcaump-title">Informasi Vendor</h2>
                         <nav class="bradcaump-inner">
                           <a class="breadcrumb-item" href="{{ url('/') }}">Home</a>
                           <span class="brd-separetor">/</span>
-                          <span class="breadcrumb-item active">Profile</span>
+                          <span class="breadcrumb-item active">Informasi Vendor</span>
                         </nav>
                     </div>
                 </div>
@@ -26,7 +26,8 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="single-portfolio-img">
-                    <img src="images/portfolio/single-portfolio/2.jpg" alt="">
+                    <?php $imgData = base64_encode($toko->file); ?>
+                    <img src='data:image/jpeg;base64, {{$imgData}}' width="270px" height="270px" alt="product images">
                 </div>
                 {{-- <div class="categories-menu mrg-xs">
                     <div class="category-menu-list">
@@ -41,15 +42,13 @@
             </div>
             <div class="col-md-8">
                 <div class="portfolio-description mrg-sm" id="profile">
-                    <h2>Profile</h2>
+                    <h2>Informasi Vendor</h2>
                     <div class="portfolio-info">
                         <ul>
-                            <li><span>Name:</span></li>
-                            <li><span>Email:</span>tayeb@gmail.com</li>
-                            <li><span>Username:</span>tayebs</li>
-                            <li><span>Password:</span>*******</li>
-                            <li><span>Adress:</span>Jl. ashafhafb</li>
-                            <li><span>Phone:</span>082244225879</li>
+                            <li><span>Nama Vendor :</span>{{$toko->NAMA_TOKO_JASA}}</li>
+                            <li><span>Alamat :</span>{{$toko->ALAMAT}}</li>
+                            <li><span>Nomor telepon :</span>{{$toko->NOMOR_TELEPON}}</li>
+                            <li><span>Deskripsi toko :</span>{{$toko->DESKRIPSI_TOKO_JASA}}</li>
                         </ul>
                     </div>
                 </div>
@@ -60,26 +59,38 @@
 <div class="portfolio-related-post pb--100 bg__white" id="order">
     <div class="container">
         <div class="section__title text-center mb--50">
-            <h2 class="title__line">Orders</h2>
+            <h2 class="title__line">Penawaran produk atau paket</h2>
         </div>
         <div class="tab-content portfolio-carousel-style jump">
             <div class="related-portfolio">
                 <div class="row">
-                    <div class="portfolio-slider-active owl-carousel">
-                        <div class="col-md-4 col-sm-6 col-xs-12">
-                            <div class="single-portfolio mb--30">
-                                <div class="portfolio-img-title">
-                                    <a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#">
-                                        <img src="images/portfolio/equal/1.jpg" alt="" />
-                                    </a>
-                                    <div class="portfolio-title hover-title">
-                                        {{-- <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li> --}}
-                                        <h3><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#">TITLE GOES HERE</a></h3>
-                                        <span>Design</span>
+                    <div class="product__list another-product-style">
+                        <!-- Start Single Product -->
+                        <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
+                            <div class="product foo">
+                                <div class="product__inner">
+                                    <div class="pro__thumb">
+                                        <a href="#">
+                                            <img src="{{asset('images/product/1.png')}}" alt="product images">
+                                        </a>
                                     </div>
-                                </div>					
-                            </div>				
+                                    <div class="product__hover__info">
+                                        <ul class="product__action">
+                                            <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                            <li><a title="Add TO Cart" href="{{ route('cart') }}"><span class="ti-shopping-cart"></span></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="product__details">
+                                    <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                                    <ul class="product__price">
+                                        <li class="old__price">$16.00</li>
+                                        <li class="new__price">$10.00</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
+                        <!-- End Single Product -->
                     </div>
                 </div>
             </div>
@@ -110,23 +121,14 @@
                             <div class="price-box-3">
                                 <div class="s-price-box">
                                     <span class="new-price">$17.20</span>
-                                    <span class="old-price">$21.20</span>
+                                    <span class="old-price">$45.00</span>
                                 </div>
                             </div>
                             <div class="quick-desc">
                                 Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
                             </div>
-                            <div class="select__size">
-                                <h2>Payment Status</h2>
-                                <ul class="color__list">
-                                    <li>Lunas</li>
-                                </ul>
-                            </div>
-                            <div class="select__size">
-                                <h2>Event Date</h2>
-                                <ul class="color__list">
-                                    <li>Senin, 13 Desember 2021</li>
-                                </ul>
+                            <div class="addtocart-btn">
+                                <a href="#">Add to cart</a>
                             </div>
                         </div><!-- .product-info -->
                     </div><!-- .modal-product -->

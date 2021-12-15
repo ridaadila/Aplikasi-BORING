@@ -161,7 +161,7 @@ class BerandaController extends Controller
 
         // dd($produk);
 
-        return view('boring.detail1', compact('produk', 'toko'));
+        return view('boring.detail', compact('produk', 'toko'));
         
     }
 }
